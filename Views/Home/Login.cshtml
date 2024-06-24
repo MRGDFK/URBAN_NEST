@@ -1,4 +1,5 @@
-﻿@{
+﻿@model UrbanNest.Models.Login
+@{
     ViewBag.Title = "Login";
 }
 
@@ -16,14 +17,13 @@
 
         .container {
             max-width: 850px;
-            
         }
 
         .form-section {
             background-color: white;
             padding: 30px;
-            margin-top:80px;
-            margin-bottom:100px;
+            margin-top: 80px;
+            margin-bottom: 100px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -51,12 +51,10 @@
         }
 
         .divider1 {
-            
             height: 150px;
             width: 1px;
             background-color: #6c757d;
             margin: 55px 7px;
-            
         }
 
         .divider2 {
@@ -67,11 +65,8 @@
         }
 
         .or {
-           
-            
             font-weight: bold;
             padding: 30px 0;
-            
         }
 
         .social-login-buttons {
@@ -86,7 +81,7 @@
         }
 
             .social-login .btn-block .btn-icon {
-                max-height: 30px; 
+                max-height: 30px;
                 margin-right: 10px;
             }
 
@@ -101,18 +96,22 @@
             <div class="col-md-6">
                 <div class="form-section">
                     <h2 class="text-center">Login</h2>
-                    <p class="text-center">Don't have an account? <a href="~/Views/Home/Signup.cshtml">Sign up</a></p>
-                    <form>
+                    <p class="text-center">Don't have an account? <a href="@Url.Action("Signup", "Home")">Sign up</a></p>
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
                         <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email address">
+                            @Html.LabelFor(m => m.Email);
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                            @Html.ValidationMessageFor(m => m.Email)
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            @Html.ValidationMessageFor(m => m.Password)
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    </form>
+                    }
                 </div>
             </div>
             <div class="col-md-6">

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UrbanNest.Data;
+using UrbanNest.Models;
 
 namespace UrbanNest.Controllers
 {
@@ -39,6 +41,42 @@ namespace UrbanNest.Controllers
             ViewBag.Message = "Your Signup page.";
 
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Signup (Signup model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Database_helper.RegisterUser(model.FirstName, model.LastName, model.Email, model.Password, model.Address, model.Phone))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Registration failed");
+                }
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Login model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Database_helper.ValidUser(model.Email, model.Password))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Registration failed");
+                }
+            }
+            return View(model);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model UrbanNest.Models.Signup
+
+@{
     ViewBag.Title = "Signup";
 }
 
@@ -16,8 +18,6 @@
 
         .container {
             max-width: 850px;
-            
-            
         }
 
         .form-section {
@@ -50,14 +50,14 @@
         }
 
         .divider1 {
-            height: 220px;
+            height: 300px;
             width: 1px;
             background-color: #6c757d;
             margin: 40px 7px;
         }
 
         .divider2 {
-            height: 220px;
+            height: 300px;
             width: 1px;
             background-color: #6c757d;
             margin: 10px 7px;
@@ -72,8 +72,8 @@
 
         .social-login-buttons {
             text-align: center;
-            margin-top: -500px;
-            margin-left:20px;
+            margin-top: -700px;
+            margin-left: 20px;
         }
 
         .social-login .btn-block {
@@ -82,12 +82,12 @@
         }
 
             .social-login .btn-block .btn-icon {
-                max-height: 30px; 
+                max-height: 30px;
                 margin-right: 10px;
             }
 
-        .row{
-            margin-top:80px;
+        .row {
+            margin-top: 80px;
         }
     </style>
 </head>
@@ -97,30 +97,47 @@
             <div class="col-md-6">
                 <div class="form-section">
                     <h2 class="text-center">Sign up</h2>
-                    <p class="text-center">Already have an account? <a href="@Url.Action("Login","Home")">Sign in</a></p>
-                    <form>
+                    <p class="text-center">Already have an account? <a href="@Url.Action("Login", "Home")">Sign in</a></p>
+                    @using (Html.BeginForm("Signup", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
                         <div class="form-group">
-                            <label for="firstName">First name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First name">
+                            @Html.LabelFor(m => m.FirstName)
+                            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "Enter Full Name" })
+                            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
-                            <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last name">
+                            @Html.LabelFor(m => m.LastName)
+                            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Enter Username" })
+                            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email address">
+                            @Html.LabelFor(m => m.Email)
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email-address" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
+                            @Html.LabelFor(m => m.Phone)
+                            @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", placeholder = "Enter Phone info" })
+                            @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
-                            <label for="confirmPassword">Confirm password</label>
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+                            @Html.LabelFor(m => m.Address)
+                            @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Enter Residential Address" })
+                            @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.ConfirmPassword)
+                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Confirm password" })
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
-                    </form>
+                    }
                 </div>
             </div>
             <div class="col-md-6">
@@ -149,5 +166,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
 </body>
 </html>
