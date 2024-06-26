@@ -69,6 +69,7 @@ namespace UrbanNest.Controllers
             {
                 if (Database_helper.ValidUser(model.Email, model.Password))
                 {
+                    Session["LoggedIn"] = "active";
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -77,6 +78,12 @@ namespace UrbanNest.Controllers
                 }
             }
             return View(model);
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
