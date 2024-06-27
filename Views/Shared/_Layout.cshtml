@@ -23,8 +23,8 @@
         }
 
             .navbar-brand img {
-                height: 25px; /* Adjust as necessary */
-                margin-right: 10px; /* Adjust spacing as necessary */
+                height: 25px; 
+                margin-right: 10px; 
             }
 
         .navbar-nav .nav-link {
@@ -45,6 +45,7 @@
         .btn-rounded {
             border-radius: 20px !important;
         }
+
         .dropdown-menu {
             right: 0;
             left: auto;
@@ -54,6 +55,57 @@
                 color: red;
             }
 
+        .toggle-switch {
+            display: flex;
+            align-items: center;
+            padding: 0px 10px;
+            margin-right: 15px;
+        }
+
+            .toggle-switch input {
+                display: none;
+            }
+
+            .toggle-switch label {
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 25px;
+                background-color: #ccc;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.4s;
+                vertical-align: middle;
+                margin-top: 5px; /* Added margin to lower the switch */
+            }
+
+                .toggle-switch label:before {
+                    content: '';
+                    position: absolute;
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 50%;
+                    background-color: white;
+                    transition: transform 0.4s;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    top: 1px; /* Center the circle vertically */
+                    left: 1px; /* Center the circle horizontally */
+                }
+
+        input:checked + label {
+            background-color: lightblue;
+        }
+
+            input:checked + label:before {
+                transform: translateX(25px);
+            }
+
+        .toggle-switch span {
+            margin-left: 10px;
+            color: #fff;
+            font-weight: bold;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -61,7 +113,6 @@
         <div class="container">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                 <img src="~/Content/urbanNest.png" alt="Logo" />
-                
             </a>
 
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +122,7 @@
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Buy", "Buy", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="nav-item">@Html.ActionLink("Sell", "Sell", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Sell", "Sell", "BS", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Agent", "Agent", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
@@ -79,6 +130,11 @@
                 <ul class="navbar-nav">
                     @if (Session["LoggedIn"] == "active")
                     {
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="modeSwitch" />
+                            <label for="modeSwitch"></label>
+                            <span id="modeLabel">Buyer Mode</span>
+                        </div>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="~/Content/user.png" alt="Profile" style="height: 25px; width: 25px;" />
@@ -113,5 +169,35 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modeSwitch = document.getElementById("modeSwitch");
+            const modeLabel = document.getElementById("modeLabel");
+
+            // Check if there's a saved mode in the sessionStorage
+            const savedMode = sessionStorage.getItem("userMode");
+            if (savedMode) {
+                if (savedMode === "Seller") {
+                    modeSwitch.checked = true;
+                    modeLabel.textContent = "Seller Mode";
+                } else {
+                    modeSwitch.checked = false;
+                    modeLabel.textContent = "Buyer Mode";
+                }
+            }
+
+            modeSwitch.addEventListener("change", function () {
+                if (modeSwitch.checked) {
+                    modeLabel.textContent = "Seller Mode";
+                    sessionStorage.setItem("userMode", "Seller");
+                    // Implement mode switch logic here
+                } else {
+                    modeLabel.textContent = "Buyer Mode";
+                    sessionStorage.setItem("userMode", "Buyer");
+                    // Implement mode switch logic here
+                }
+            });
+        });
+    </script>
 </body>
 </html>

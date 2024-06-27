@@ -43,6 +43,12 @@ namespace UrbanNest.Controllers
             return View();
         }
 
+        public ActionResult Sell()
+        {
+            ViewBag.Message = "Your Sell Page";
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Signup (Signup model)

@@ -1,0 +1,106 @@
+﻿@model UrbanNest.Models.property
+
+@{
+    ViewBag.Title = "Sell";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 850px;
+        }
+
+        .form-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .form-section h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #004d40;
+            }
+
+            .form-section .btn-primary {
+                background-color: #0a3d62;
+                border: none;
+            }
+
+                .form-section .btn-primary:hover {
+                    background-color: #031c33;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-section">
+                    <h2 class="text-center">Property Info</h2>
+                    <br>
+                    @using (Html.BeginForm("Sell", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Title)
+                            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = "Enter Property Title" })
+                            @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Location)
+                            @Html.TextBoxFor(m => m.Location, new { @class = "form-control", placeholder = "Enter Property Location" })
+                            @Html.ValidationMessageFor(m => m.Location, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Price)
+                            @Html.TextBoxFor(m => m.Price, new { @class = "form-control", placeholder = "Enter Price" })
+                            @Html.ValidationMessageFor(m => m.Price, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Area)
+                            @Html.TextBoxFor(m => m.Area, new { @class = "form-control", placeholder = "Enter Area" })
+                            @Html.ValidationMessageFor(m => m.Area, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Bed)
+                            @Html.TextBoxFor(m => m.Bed, new { @class = "form-control", placeholder = "Enter Bed Count" })
+                            @Html.ValidationMessageFor(m => m.Bed, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Bath)
+                            @Html.TextBoxFor(m => m.Bath, new { @class = "form-control", placeholder = "Enter Bath Count" })
+                            @Html.ValidationMessageFor(m => m.Bath, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Description)
+                            @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder = "Enter Description (optional)" })
+                            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="form-group">
+                            @Html.Label("image_01", "Image 01 *")
+                            <input type="file" name="image_01" class="form-control-file" accept="image/*" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Post</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+</body>
+</html>
