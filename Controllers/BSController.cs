@@ -16,40 +16,8 @@ namespace UrbanNest.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult Buy()
-        {
-            var model = new PropertyViewModel
-            {
-                RecentProperties = GetRecentProperties(),
-                SearchCriteria = new PropertySearchCriteria(),
-                SearchResults = new List<Property>()
-            };
+       
+       
 
-            return View(model);
-        }
-
-        [HttpPost]
-        public ActionResult Search(PropertySearchCriteria searchCriteria)
-        {
-            var model = new PropertyViewModel
-            {
-                RecentProperties = GetRecentProperties(),
-                SearchCriteria = searchCriteria,
-                SearchResults = SearchProperties(searchCriteria)
-            };
-
-            return View("Buy", model);
-        }
-
-        private List<Property> SearchProperties(PropertySearchCriteria searchCriteria)
-        {
-            throw new NotImplementedException();
-        }
-
-        private List<Property> GetRecentProperties()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
