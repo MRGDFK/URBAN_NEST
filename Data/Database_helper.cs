@@ -92,7 +92,7 @@ namespace UrbanNest.Data
             }
         }
 
-
+        /*
         public static bool RegisterProperty(string sellerID, string Title, string Location, string Price, string Area, string Bed, string Bath, string type, string status, string Property_Image)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -117,5 +117,31 @@ namespace UrbanNest.Data
                 return result > 0;
             }
         }
+        */
+        public static bool RegisterProperty(string sellerId, string Title, string Location, string Price, string Area, string Bed, string Bath, string type, string status, string Property_Image)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "INSERT INTO property (seller_id, prop_description, prop_location, prop_price, prop_size, prop_bed, prop_bath, prop_type, prop_status, prop_image ) VALUES (@SellerId, @Title, @Location, @Price, @Area, @Bed, @Bath, @type, @status, @Image_01)";
+                SqlCommand cmd = new SqlCommand(query, connection);
+
+                cmd.Parameters.AddWithValue("@SellerId", sellerId);
+                cmd.Parameters.AddWithValue("@Title", Title);
+                cmd.Parameters.AddWithValue("@Location", Location);
+                cmd.Parameters.AddWithValue("@Price", Price);
+                cmd.Parameters.AddWithValue("@Area", Area);
+                cmd.Parameters.AddWithValue("@Bed", Bed);
+                cmd.Parameters.AddWithValue("@Bath", Bath);
+                cmd.Parameters.AddWithValue("@type", type);
+                cmd.Parameters.AddWithValue("@status", status);
+                cmd.Parameters.AddWithValue("@Image_01", Property_Image);
+
+                connection.Open();
+                int result = cmd.ExecuteNonQuery();
+                connection.Close();
+                return result > 0;
+            }
+        }
+
     }
 }
