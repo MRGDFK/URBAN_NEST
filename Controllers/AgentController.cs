@@ -11,26 +11,26 @@ using UrbanNest.Models;
 namespace UrbanNest.Controllers
 {
 
-    public class UserProfileController : Controller
+    public class AgentController : Controller
     {
         private readonly RealEstateContext _context;
 
-        public UserProfileController()
+        public AgentController()
         {
             _context = new RealEstateContext();
         }
 
-        // GET: UserProfile/Details/5
+        // GET: Agent/Details/5
         public async Task<ActionResult> Details(int id)
         {
-            var userProfile = await _context.UserProfiles
-                                             .Include(u => u.Listings)
-                                             .FirstOrDefaultAsync(u => u.UserId == id);
-            if (userProfile == null)
+            var agent = await _context.Agents
+                                      .Include(a => a.Listings)
+                                      .FirstOrDefaultAsync(a => a.AgentId == id);
+            if (agent == null)
             {
                 return HttpNotFound();
             }
-            return View(userProfile);
+            return View(agent);
         }
     }
 }

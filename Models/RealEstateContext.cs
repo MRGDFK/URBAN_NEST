@@ -1,8 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
-public class RealEstateContext : DbContext
+namespace UrbanNest.Models
 {
-    public DbSet<UserProfile> UserProfiles { get; set; }
-    public DbSet<RealEstateListing> RealEstateListings { get; set; }
+    public class RealEstateContext : DbContext
+    {
+        public DbSet<Agent> Agents { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
+        public DbSet<RealEstateListing> RealEstateListings { get; set; }
+    }
 }
-
