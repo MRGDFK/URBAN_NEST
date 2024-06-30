@@ -23,8 +23,8 @@
         }
 
             .navbar-brand img {
-                height: 25px; 
-                margin-right: 10px; 
+                height: 25px;
+                margin-right: 10px;
             }
 
         .navbar-nav .nav-link {
@@ -76,7 +76,7 @@
                 cursor: pointer;
                 transition: background-color 0.4s;
                 vertical-align: middle;
-                margin-top: 5px; /* Added margin to lower the switch */
+                margin-top: 5px;
             }
 
                 .toggle-switch label:before {
@@ -88,8 +88,8 @@
                     background-color: white;
                     transition: transform 0.4s;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-                    top: 1px; /* Center the circle vertically */
-                    left: 1px; /* Center the circle horizontally */
+                    top: 1px;
+                    left: 1px;
                 }
 
         input:checked + label {
@@ -131,9 +131,12 @@
                     @if (Session["LoggedIn"] == "active")
                     {
                         <div class="toggle-switch">
-                            <input type="checkbox" id="modeSwitch" />
-                            <label for="modeSwitch"></label>
-                            <span id="modeLabel">Buyer Mode</span>
+                            <form id="modeSwitchForm" method="post" action="@Url.Action("SetUserMode", "BS")">
+                                <input type="hidden" name="mode" id="modeInput" />
+                                <input type="checkbox" id="modeSwitch" />
+                                <label for="modeSwitch"></label>
+                                <span id="modeLabel">Buyer Mode</span>
+                            </form>
                         </div>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -173,29 +176,32 @@
         document.addEventListener("DOMContentLoaded", function () {
             const modeSwitch = document.getElementById("modeSwitch");
             const modeLabel = document.getElementById("modeLabel");
+            const modeInput = document.getElementById("modeInput");
+            const modeSwitchForm = document.getElementById("modeSwitchForm");
 
             // Check if there's a saved mode in the sessionStorage
             const savedMode = sessionStorage.getItem("userMode");
             if (savedMode) {
                 if (savedMode === "Seller") {
                     modeSwitch.checked = true;
-                    modeLabel.textContent = "Seller Mode";
+                    modeLabel.textContent = "Seller";
                 } else {
                     modeSwitch.checked = false;
-                    modeLabel.textContent = "Buyer Mode";
+                    modeLabel.textContent = "Buyer";
                 }
             }
 
             modeSwitch.addEventListener("change", function () {
                 if (modeSwitch.checked) {
-                    modeLabel.textContent = "Seller Mode";
+                    modeLabel.textContent = "Seller";
+                    modeInput.value = "seller";
                     sessionStorage.setItem("userMode", "Seller");
-                    // Implement mode switch logic here
                 } else {
-                    modeLabel.textContent = "Buyer Mode";
+                    modeLabel.textContent = "Buyer";
+                    modeInput.value = "buyer";
                     sessionStorage.setItem("userMode", "Buyer");
-                    // Implement mode switch logic here
                 }
+                modeSwitchForm.submit(); // Submit the form to update session
             });
         });
     </script>

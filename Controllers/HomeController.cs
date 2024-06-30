@@ -55,9 +55,24 @@ namespace UrbanNest.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (Database_helper.RegisterUser(model.FirstName, model.LastName, model.Email, model.Password, model.Address, model.Phone))
+                int newUserId = Database_helper.RegisterUser(model.FirstName, model.LastName, model.Email, model.Password, model.Address, model.Phone);
+                if (newUserId>0)
                 {
-                    return RedirectToAction("Index", "Home");
+                    
+                    string sellerId = Database_helper.GetSellerId(newUserId);
+                    if (!string.IsNullOrEmpty(sellerId))
+                    {
+                        // Step 3: Store the seller_id in the session
+                        Session["seller_id"] = sellerId;
+
+                        // Redirect to the home page or another appropriate page
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Failed to retrieve seller ID. Please try again.");
+                    }
+                    //return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -67,14 +82,15 @@ namespace UrbanNest.Controllers
             return View(model);
         }
 
-        [HttpPost]
+        /*[HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(Login model)
         {
             if (ModelState.IsValid)
             {
                 if (Database_helper.ValidUser(model.Email, model.Password))
-                {
+                {   
+
                     Session["LoggedIn"] = "active";
                     return RedirectToAction("Index", "Home");
                 }
@@ -84,7 +100,40 @@ namespace UrbanNest.Controllers
                 }
             }
             return View(model);
+        }*/
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(Login model)
+        {
+            if (ModelState.IsValid)
+            {
+                int userId = Database_helper.GetUserId(model.Email, model.Password);
+                if (userId > 0)
+                {
+                    string sellerId = Database_helper.GetSellerId(userId);
+
+                    if (sellerId != null)
+                    {
+                        
+                        Session["LoggedIn"] = "active";
+                        Session["seller_id"] = sellerId;
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Failed to retrieve seller ID. Please try again.");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid email or password. Please try again.");
+                }
+            }
+            return View(model);
         }
+
 
         public ActionResult Logout()
         {

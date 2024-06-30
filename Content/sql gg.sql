@@ -13,7 +13,7 @@ create table admin(
 	admin_password Nvarchar(255) not null check (LEN(admin_password) >= 8)
 
 	);
-use real_state_listing_property;
+use real_estate_listing_properties;
 	insert into admin( admin_name, admin_image, admin_contact, admin_email, admin_password) 
     values ('XYZX','uwv.png','0175664896','XY@gmail.com','123456678345234');
 
@@ -94,11 +94,12 @@ CREATE TABLE property (
 
 
     use real_state_listing_property;
-	insert into property( seller_id, prop_location, porp_type, prop_description, prop_size, prop_price, prop_status, prop_image, prop_bed, prop_bath)
-    values('1.3','Badda','Flat','This is description','2200 sqft','475000','on list', 'property1.png',5,4);
+	insert into property(prop_location, porp_type, prop_description, prop_size, prop_price, prop_status, prop_image, prop_bed, prop_bath)
+    values('Badda','Flat','This is description','2200 sqft','475000','on list', 'property1.png',5,4);
 	
 	
-    
+    select *from users
+select *from generate
 	select *from property;
 
 USE real_state_listing_property;
@@ -137,3 +138,4 @@ VALUES ('pending', GETDATE(), 'keu kininyen na, vejal ase', '1.3', 1);
 
 ------------------------------------------------------------------------------
 
+SELECT seller_id FROM generate
