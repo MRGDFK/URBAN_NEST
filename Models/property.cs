@@ -13,7 +13,7 @@ namespace UrbanNest.Models
         public string Area { get; set; }
         public string Bed { get; set; }
         public string Bath { get; set; }
-        public string Description { get; set; }
-        public HttpPostedFileBase Image_01 { get; set; }
+        public string Status { get; set; }
+        public string Image_01 { get; set; }
     }
 }

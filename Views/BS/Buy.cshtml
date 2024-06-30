@@ -1,1 +1,135 @@
-﻿
+﻿@model IEnumerable<UrbanNest.Models.property>
+
+
+@{
+    ViewBag.Title = "Buy";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Properties</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #0a3d62;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .hero {
+            margin-top: 50px;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            .hero h1 {
+                color: #0a3d62;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+        .property-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+            .property-card img {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+                max-height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .property-card .card-body {
+                padding: 15px;
+            }
+
+            .property-card .card-title {
+                font-size: 1.25rem;
+                font-weight: bold;
+            }
+
+            .property-card .card-text {
+                color: #555;
+            }
+
+        .btn-primary {
+            background-color: #1e90ff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #1c86ee;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Real Estate</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Rent</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Available Properties for Sale</h1>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            @foreach (var property in Model)
+            {
+                <div class="col-md-4">
+                    <div class="property-card">
+                        <img src="@Url.Content("~/Images/" + property.Image_01   )" alt="Property Image">
+                        <div class="card-body">
+                            <h5 class="card-title">@property.Title</h5>
+                            <p class="card-text">@property.Status</p>
+                            <p class="card-text"><strong>Price:</strong> $@property.Price</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
