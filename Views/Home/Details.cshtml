@@ -1,0 +1,31 @@
+﻿@model UrbanNest.Models.UserProfile
+
+<div class="profile-dashboard">
+    <div class="profile-header">
+        <img src="@Model.ProfilePictureUrl" alt="Profile Picture" class="profile-picture" />
+        <h2>@Model.FullName</h2>
+        <p>@Model.Email</p>
+        <p>@Model.PhoneNumber</p>
+    </div>
+
+    <div class="listings">
+        <h3>Your Listings</h3>
+        @if (Model.Listings.Any())
+        {
+            foreach (var listing in Model.Listings)
+            {
+        <div class="listing">
+            <img src="@listing.ImageUrl" alt="Listing Image" class="listing-image" />
+            <h4>@listing.Title</h4>
+            <p>@listing.Description</p>
+            <p>Price: @listing.Price.ToString("C")</p>
+            <p>Posted on: @listing.PostedDate.ToShortDateString()</p>
+        </div>
+            }
+        }
+        else
+        {
+        <p>You have no listings.</p>
+        }
+    </div>
+</div>
