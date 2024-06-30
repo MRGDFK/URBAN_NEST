@@ -126,6 +126,9 @@ VALUES (@users_id, @buyer_id, @seller_id);
 -- Retrieve all records from the Generate table
 SELECT * FROM generate;
 
+ALTER TABLE generate
+drop COLUMN users_id;
+
 
 
 -------------------------------------------------------------------------------------
