@@ -43,6 +43,63 @@ VALUES ('AMB', 'ABC', 'uv.png', 'dchvasjdc ikavcjav', '017734896', 'AMB@gmail.co
 
 INSERT INTO users (users_name, users_username, users_image, users_address, users_contact, users_email, users_password) 
 VALUES ('GG', 'ABC', 'uv.png', 'dchvasjdc ikavcjav', '017734896', 'AGG@gmail.com', '123556789');
+------------------------------------------------------------------------------------------------------
+USE real_estate_listing_properties;
+create table agent(
+	agent_id int not null identity(1,1) primary key ,
+	agent_name varchar(52) not null,
+	agent_username varchar(16) not null,
+	agent_image varchar(16),
+	agent_address varchar(256) not null,
+	agent_contact varchar(11) not null,
+	agent_email varchar(52) unique check (agent_email like '%@gmail.com'),
+	agent_password NVARCHAR(255) check (LEN(agent_password) >= 8),
+	agent_review varchar(255),
+	
+	agent_star float
+
+	);
+
+	drop table agent
+
+	
+  USE real_estate_listing_properties;
+USE real_estate_listing_properties;
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('John Doe', 'john123', 'john.png', '123 Elm St, Springfield', '0123456789', 'john@gmail.com', 'password123', 'Very professional', 8.5);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Jane Smith', 'jane456', 'jane.png', '456 Oak St, Springfield', '0987654321', 'jane@gmail.com', 'securepass', 'Highly recommended', 9.0);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Alice Johnson', 'alice789', 'alice.png', '789 Pine St, Springfield', '0192837465', 'alice@gmail.com', 'mypassword', 'Great service', 7.0);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Bob Brown', 'bob987', 'bob.png', '987 Maple St, Springfield', '0213465789', 'bob@gmail.com', 'bobspass', 'Friendly and helpful', 6.5);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Charlie Davis', 'charlie654', 'charlie.png', '654 Cedar St, Springfield', '0321654987', 'charlie@gmail.com', 'charliesecure', 'Knowledgeable', 7.5);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Diane Evans', 'diane321', 'diane.png', '321 Birch St, Springfield', '0432165498', 'diane@gmail.com', 'dianepass', 'Excellent communicator', 9.5);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Eve Foster', 'eve213', 'eve.png', '213 Redwood St, Springfield', '0543216987', 'eve@gmail.com', 'evepass123', 'Highly skilled', 8.0);
+
+INSERT INTO agent (agent_name, agent_username, agent_image, agent_address, agent_contact, agent_email, agent_password, agent_review, agent_star)
+VALUES ('Frank Green', 'frank432', 'frank.png', '432 Chestnut St, Springfield', '0654321879', 'frank@gmail.com', 'franksecure', 'Very reliable', 7.0);
+
+USE real_estate_listing_properties;
+SELECT * FROM agent;
+
+
+USE real_estate_listing_properties;
+SELECT * FROM agent;
+
+	select *from agent;
+
+
 ---------------------------------------------------------------------------------------------------------
 CREATE TABLE generate (
     users_id INT NOT NULL,

@@ -1,19 +1,30 @@
-﻿@{
-    ViewBag.Title = "Agent";
+﻿@model IEnumerable<UrbanNest.Models.Agent>
+
+@{
+    ViewBag.Title = "Agent Listing";
 }
-<main aria-labelledby="title">
-    <h2 id="title">@ViewBag.Title.</h2>
-    <h3>@ViewBag.Message</h3>
 
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
-
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
-</main>
+<div class="container mt-4">
+    <h2>Agent Listing</h2>
+    <div class="row">
+        @foreach (var agent in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="~/images/@agent.AgentImage" class="card-img-top" alt="@agent.AgentName">
+                    <div class="card-body">
+                        <h5 class="card-title">@agent.AgentName</h5>
+                        <p class="card-text">
+                            <strong>Username:</strong> @agent.AgentUsername<br />
+                            <strong>Address:</strong> @agent.AgentAddress<br />
+                            <strong>Contact:</strong> @agent.AgentContact<br />
+                            <strong>Email:</strong> @agent.AgentEmail<br />
+                            <strong>Review:</strong> @agent.AgentReview<br />
+                            <strong>Stars:</strong> @agent.AgentStar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

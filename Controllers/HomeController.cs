@@ -49,6 +49,11 @@ namespace UrbanNest.Controllers
             return View();
         }
 
+        public ActionResult UserDashboard()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Signup (Signup model)

@@ -10,7 +10,7 @@ namespace UrbanNest.Data
 {
     public class Database_helper
     {
-        private static readonly string connectionString = "Data Source=MRGDFK\\SQLEXPRESS;Initial Catalog=real_estate_listing_properties;Integrated Security=True";
+        private static readonly string connectionString = "Data Source=DESKTOP-AIKR8ED\\SQLEXPRESS01;Initial Catalog=real_estate_listing_properties;Integrated Security=True";
 
         public static int RegisterUser(string firstName, string lastName, string email, string password, string address, string phone)
         {
@@ -37,6 +37,8 @@ namespace UrbanNest.Data
                 return newUsersId;
             }
         }
+
+
 
 
 

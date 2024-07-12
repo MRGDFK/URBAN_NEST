@@ -1,7 +1,183 @@
-﻿
-@{
-    ViewBag.Title = "UserDashboard";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
 
-<h2>UserDashboard</h2>
+        .navbar {
+            background-color: #0a3d62;
+        }
 
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .dashboard-container {
+            margin-top: 50px;
+        }
+
+        .sidebar {
+            background-color: #343a40;
+            height: 100vh;
+            position: fixed;
+            width: 250px;
+            top: 0;
+            left: 0;
+            padding-top: 60px;
+        }
+
+            .sidebar a {
+                color: #fff;
+                display: block;
+                padding: 15px;
+                text-decoration: none;
+            }
+
+                .sidebar a:hover {
+                    background-color: #495057;
+                }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .profile-header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+            .profile-header img {
+                border-radius: 50%;
+                max-width: 100px;
+                margin-right: 20px;
+            }
+
+            .profile-header h2 {
+                color: #0a3d62;
+                margin-top: 0;
+            }
+
+            .profile-header p {
+                color: #6c757d;
+            }
+
+        .profile-details {
+            margin-top: 20px;
+        }
+
+            .profile-details h3 {
+                color: #0a3d62;
+                margin-bottom: 20px;
+            }
+
+            .profile-details .list-group-item {
+                border: none;
+                padding: 10px 20px;
+                border-radius: 8px;
+                background-color: #fff;
+                margin-bottom: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+        .card {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Real Estate</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">My Listings</a>
+        <a href="#">Messages</a>
+        <a href="#">Settings</a>
+    </div>
+
+    <div class="content dashboard-container">
+        <div class="profile-header">
+            <img src="~/Content/user.png" alt="User Profile Picture">
+            <div>
+                <h2>@ViewBag.UserName</h2>
+                <p>@ViewBag.UserEmail</p>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <h3>User Details</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Full Name:</strong> @ViewBag.FullName
+                </li>
+                <li class="list-group-item">
+                    <strong>Email:</strong> @ViewBag.Email
+                </li>
+                <li class="list-group-item">
+                    <strong>Phone:</strong> @ViewBag.Phone
+                </li>
+                <li class="list-group-item">
+                    <strong>Address:</strong> @ViewBag.Address
+                </li>
+                <li class="list-group-item">
+                    <strong>Joined On:</strong> @ViewBag.JoinedDate
+                </li>
+            </ul>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <p class="card-text">No recent activity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">My Listings</h5>
+                        <p class="card-text">You have X active listings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
