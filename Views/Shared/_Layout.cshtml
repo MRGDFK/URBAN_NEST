@@ -106,6 +106,71 @@
             font-weight: bold;
             vertical-align: middle;
         }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            color: #6c757d;
+        }
+
+            footer a {
+                color: #6c757d;
+            }
+
+                footer a:hover {
+                    color: #0a3d62;
+                    text-decoration: none;
+                }
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        .footer-nav {
+            list-style: none;
+            padding: 0;
+        }
+
+            .footer-nav li {
+                margin-bottom: 10px;
+            }
+
+                .footer-nav li a {
+                    color: #6c757d;
+                }
+
+                    .footer-nav li a:hover {
+                        color: #0a3d62;
+                        text-decoration: none;
+                    }
+
+        .social-icons a {
+            margin-right: 10px;
+            color: #6c757d;
+        }
+
+            .social-icons a:hover {
+                color: #0a3d62;
+            }
+
+        .newsletter-form input[type="email"] {
+            border: 1px solid #6c757d;
+            padding: 10px;
+            width: 70%;
+            margin-right: 5px;
+        }
+
+        .newsletter-form button {
+            border: none;
+            padding: 10px 20px;
+            background-color: #0a3d62;
+            color: #fff;
+            cursor: pointer;
+        }
+
+            .newsletter-form button:hover {
+                background-color: #045a9b;
+            }
     </style>
 </head>
 <body>
@@ -165,7 +230,46 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-logo">
+                        <a href="@Url.Action("Index", "Home")">
+                            <img src="~/Content/urbanNest.png" alt="UrbanNest Logo" />
+                        </a>
+                        <p>&copy; @DateTime.Now.Year - UrbanNest</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <ul class="footer-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Buy", "Buy", "BS")</li>
+                            <li>@Html.ActionLink("Sell", "Sell", "BS")</li>
+                            <li>@Html.ActionLink("Agent", "Agent", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p>
+                            <strong>Address:</strong> AUST, Tejgaon<br />
+                            <strong>Phone:</strong> +8801881362663<br />
+                            <strong>Email:</strong> info@urbannest.com
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <h5>Newsletter</h5>
+                        <form class="newsletter-form" action="#" method="post">
+                            <input type="email" name="email" placeholder="Your email" required />
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 

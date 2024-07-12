@@ -6,94 +6,342 @@
     <title>@ViewBag.Title</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    body {
-        background-color: #f8f9fa;
-    }
+        body {
+            background-color: #f8f9fa;
+        }
 
-    .navbar {
-        background-color: #0a3d62;
-    }
+        .navbar {
+            background-color: #0a3d62;
+        }
 
-    .navbar-brand {
-        color: #fff;
-        font-weight: bold;
-    }
+        .container {
+            max-width: 1320px;
+        }
 
-    .navbar-nav .nav-link {
-        color: #fff;
-    }
-
-    .hero {
-        margin-top:100px;
-        color: #fff;
-        padding: 50px 0px;
-        text-align: left;
-        margin-left:-30px;
-
-    }
-
-        .hero h1 {
-            color: #0a3d62;
-            font-size: 3rem;
+        .navbar-brand {
+            color: #fff;
             font-weight: bold;
         }
 
-        .hero p {
-            color:black;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+        .navbar-nav .nav-link {
+            color: #fff;
         }
 
-    .search-form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-        .search-form .form-control {
-            margin-bottom: 10px;
+        .hero {
+            margin-top: 100px;
+            color: #fff;
+            padding: 50px 0;
+            text-align: left;
         }
 
-    .btn-primary {
-        background-color: #1e90ff;
-        border: none;
-    }
+            .hero h1 {
+                color: #0a3d62;
+                font-size: 3rem;
+                font-weight: bold;
+            }
 
-        .btn-primary:hover {
-            background-color: #1c86ee;
+            .hero p {
+                color: black;
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+
+        .search-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
+            .search-form .form-control {
+                margin-bottom: 10px;
+            }
 
-    .gif-container {
-        margin-top:-60px;
+        .btn-primary {
+            background-color: #1e90ff;
+            border: none;
+        }
 
-        text-align: center;
-    }
+            .btn-primary:hover {
+                background-color: #1c86ee;
+            }
 
-        .gif-container img {
-            max-width: 130%;
-            height: auto;
-            display: block;
-            margin: 0 30px;
-            animation: jump 2s infinite ease-in-out;
+        .gif-container {
+            margin-top: -60px;
+            text-align: center;
+        }
+
+            .gif-container img {
+                max-width: 130%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                animation: jump 2s infinite ease-in-out;
+            }
+
+        @@keyframes jump {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .services {
+            padding: 50px 0;
+            justify-content:center;
             
         }
 
-         @@keyframes jump {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-15px);
+            .services h2 {
+                text-align: center;
+                color: #0a3d62;
+                margin-bottom: 30px;
+            }
+
+        .service-item {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
+            .service-item img {
+                height: 80px;
+                margin-bottom: 20px;
+            }
+
+        .testimonials {
+            padding: 50px 0;
+        }
+
+            .testimonials h2 {
+                text-align: center;
+                color: #0a3d62;
+                margin-bottom: 30px;
+            }
+
+        .testimonial-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            margin-right:20px;
+        }
+
+            .testimonial-item p {
+                font-style: italic;
+                color: #555;
+            }
+
+            .testimonial-item .author {
+                font-weight: bold;
+                color: #0a3d62;
+            }
+
+        .featured-listings {
+            padding: 50px 0;
+        }
+
+            .featured-listings h2 {
+                text-align: center;
+                color: #0a3d62;
+                margin-bottom: 30px;
+            }
+
+        .listing-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+            .listing-item img {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }
+
+            .listing-item h3 {
+                color: #0a3d62;
+                margin-bottom: 10px;
+            }
+
+            .listing-item p {
+                color: #555;
+            }
+
+        .call-to-action {
+            padding: 50px 0;
+            background-color: #0a3d62;
+            color: #fff;
+            text-align: center;
+        }
+
+            .call-to-action h2 {
+                margin-bottom: 20px;
+            }
+
+            .call-to-action .btn {
+                background-color: #1e90ff;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+            }
+
+                .call-to-action .btn:hover {
+                    background-color: #1c86ee;
+                }
+
+        .home-recommendations {
+            padding: 50px 0;
+            text-align: center;
+            background-color: #fff;
+        }
+
+            .home-recommendations h2 {
+                color: #0a3d62;
+                margin-bottom: 30px;
+            }
+
+        .recommendation {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: -60px;
+        }
+
+        .RecoImg img {
+            width: 100%;
+        }
+
+        .recommendation .info {
+            text-align: right;
+            margin: 10px;
+            justify-content: right;
+        }
+
+            .recommendation .info h3 {
+                color: #0a3d62;
+                margin-bottom: 10px;
+            }
+
+            .recommendation .info p {
+                color: #555;
+            }
+
+            .recommendation .info button {
+                background-color: transparent;
+                border: 2px solid #1e90ff;
+                border-radius:30px;
+                color: #1e90ff;
+                padding: 10px 20px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+
+                .recommendation .info button:hover {
+                    background-color: #1e90ff;
+                    color: #fff;
+                    box-shadow: 0 0 20px rgba(30, 144, 255, 0.6);
+                }
+
+                .recommendation .info button::before {
+                    content: '';
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: rgba(30, 144, 255, 0.2);
+                    transform: rotate(45deg);
+                    transition: all 0.5s ease;
+                    z-index: 1;
+                }
+
+                .recommendation .info button:hover::before {
+                    top: -20%;
+                    left: -20%;
+                }
+
+            .BuyImg{
+                width:50%;
+                margin-left:100px;
+                
+            }
+
+        .services-item {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            align-content:center;
+            margin-right:20px;
+        }
+            .services-item p {
+                color: #555;
+                text-align:center;
+            }
+            .services-item button{
+                align-content:center;
+            }
+            .services-item h2{
+                font-weight:bold;
+            }
+        .services-btn {
+            background-color: transparent;
+            border: 2px solid #0026ff;
+            justify-content: center;
+            margin-left: 90px;
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            color: #0026ff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+            .services-btn:hover {
+                background-color: #0026ff;
+                color: #fff;
+                box-shadow: 0 0 20px rgba(30, 144, 255, 0.6);
+            }
+            .services-btn::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: rgba(30, 144, 255, 0.2);
+                transform: rotate(45deg);
+                transition: all 0.5s ease;
+                z-index: 1;
+            }
+            .services-btn:hover::before {
+                top: -20%;
+                left: -20%;
+            }
+        .row {
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: calc(-1* var(--bs-gutter-y));
+            margin-right: calc(-0.5* var(--bs-gutter-x));
+            margin-left: calc(-0.5* var(--bs-gutter-x));
+        }
     </style>
-
 </head>
 <body>
-
-
     <div class="hero">
         <div class="container">
             <div class="row">
@@ -113,15 +361,14 @@
                                 <label for="propertyType" class="sr-only">Property Type</label>
                                 <select class="form-control" id="propertyType">
                                     <optgroup label="Residential">
-                                        <option value="apartment" selected> Apartment </option>
-                                        <option value="Room"> Room </option>
-                                        <option value="flat"> Flat </option>
-                                        <option value="plot"> Plot </option>
+                                        <option value="apartment" selected>Apartment</option>
+                                        <option value="Room">Room</option>
+                                        <option value="flat">Flat</option>
+                                        <option value="plot">Plot</option>
                                     </optgroup>
-
                                     <optgroup label="Commercial">
-                                        <option value="office"> Office </option>
-                                        <option value="floor"> Floor </option>
+                                        <option value="office">Office</option>
+                                        <option value="floor">Floor</option>
                                     </optgroup>
                                 </select>
                             </div>
@@ -140,8 +387,101 @@
         </div>
     </div>
 
+    <div class="home-recommendations">
+        <div class="container">
+            <div class="recommendation">
+                <div class="RecoImg">
+                    <img src="~/Content/recom.jpg" alt="Recommended Home" class="recomImage">
+                </div>
+                <div class="info">
+                    <h3>Get home recommendations</h3>
+                    <p>Signin for a more personalized experience.</p>
+                    <button type="button" class="btn btn-primary custom-signin-btn">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 services-item">
+                    <img src="~/Content/buy.jpg" class="BuyImg" />
+                    <h2>Buy a home</h2>
+                    <p>Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.</p>
+                    <button type="button" class="services-btn">Browse homes</button>
+                </div>
+                <div class="col-md-4 services-item">
+                    <img src="~/Content/sell.jpg" class="BuyImg" />
+                    <h2>Sell home</h2>
+                    <p>No matter what path you take to sell your home, we can help you navigate a successfull sale.</p>
+                    <button type="button" class="services-btn">See your options</button>
+                </div>
+                <div class="col-md-4 services-item">
+                    <img src="~/Content/rent.jpg" class="BuyImg" />
+                    <h2>Rent a home</h2>
+                    <p>We're creating a seamless online experience - from shopping on the largest rental network, to applying, to paying rent.</p>
+                    <button type="button" class="services-btn">Find rentals</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4 testimonial-item">
+                    <p>"UrbanNest helped me find my dream home quickly and easily. I highly recommend their services!"</p>
+                    <p class="author">- Jane Doe</p>
+                </div>
+                <div class="col-md-4 testimonial-item">
+                    <p>"The team at UrbanNest was professional and knowledgeable. They made the buying process a breeze."</p>
+                    <p class="author">- John Smith</p>
+                </div>
+                <div class="col-md-4 testimonial-item">
+                    <p>"I couldn't be happier with the service I received from UrbanNest. They found the perfect home for me."</p>
+                    <p class="author">- Sarah Johnson</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="call-to-action">
+        <div class="container">
+            <h2>Ready to find your dream home?</h2>
+            <button type="button" class="btn btn-primary">Get Started</button>
+        </div>
+    </div>
+
+    <div class="featured-listings">
+        <div class="container">
+            <h2>Featured Listings</h2>
+            <div class="row">
+                <div class="col-md-4 listing-item">
+                    <img src="~/Content/house1.jpg" alt="House 1">
+                    <h3>Modern Apartment</h3>
+                    <p>This modern apartment is located in a prime location and features stunning views.</p>
+                </div>
+                <div class="col-md-4 listing-item">
+                    <img src="~/Content/house2.jpg" alt="House 2">
+                    <h3>Luxury Villa</h3>
+                    <p>This luxury villa offers unparalleled comfort and style, with top-of-the-line amenities.</p>
+                </div>
+                <div class="col-md-4 listing-item">
+                    <img src="~/Content/house3.jpg" alt="House 3">
+                    <h3>Cozy Cottage</h3>
+                    <p>This cozy cottage is perfect for those looking for a peaceful and charming home.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4">
+        <p>&copy; 2024 UrbanNest. All rights reserved.</p>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

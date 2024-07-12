@@ -68,7 +68,7 @@ namespace UrbanNest.Controllers
                     var uniqueFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
 
                     // Define the path where the file will be saved
-                    var path = Path.Combine(Server.MapPath("~/UploadedImages"), uniqueFileName);
+                    var path = Path.Combine(Server.MapPath("~/Property_up_Images"), uniqueFileName);
 
                     // Save the file
                     Image_01.SaveAs(path);
