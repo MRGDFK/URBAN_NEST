@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -103,13 +105,46 @@ namespace UrbanNest.Controllers
 
         private IEnumerable<property> GetPropertiesFromDatabase()
         {
-            // This is just a placeholder. Replace it with your database fetching logic.
-            return new List<property>
-            {
-                new property { Title = "Beautiful Family House", Location = "BADDA", Price = "350000", Area = "2500 sqft", Bed ="3", Bath="4", status="on sell", Image_01 ="prop1.jpeg"},
+            List<property> properties = new List<property>();
 
-            };
+            // Connection string directly in the code
+            string connectionString = "Data Source=DESKTOP-AIKR8ED\\SQLEXPRESS01;Initial Catalog=real_estate_listing_properties;Integrated Security=True"; // or with User ID and Password
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string query = "SELECT prop_id, seller_id, prop_location, prop_type, prop_description, prop_size, prop_price, prop_status, prop_image, prop_bed, prop_bath FROM property";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            properties.Add(new property
+                            {
+
+                                Title = reader["prop_description"].ToString(),
+                                Location = reader["prop_location"].ToString(),
+                                Price = reader["prop_price"].ToString(),
+                                Area = reader["prop_size"].ToString(),
+                               
+                                Bed = reader["prop_bed"].ToString(),
+                                Bath =reader["prop_bath"].ToString(),
+                                type = reader["prop_type"].ToString(),
+                                
+                                status = reader["prop_status"].ToString(),
+                                Image_01 = reader["prop_image"].ToString()
+                                
+                                
+                            });
+                        }
+                    }
+                }
+            }
+
+            return properties;
         }
+
 
     }
 }

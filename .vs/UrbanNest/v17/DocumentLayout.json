@@ -3,56 +3,56 @@
   "WorkspaceRootPath": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\data\\database_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:data\\database_helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|e:\\aust 3.2\\asp.net project\\urban_nest-main\\views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\home\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\userdashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|e:\\aust 3.2\\asp.net project\\urban_nest-main\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|e:\\aust 3.2\\asp.net project\\urban_nest-main\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\models\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:models\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\bs\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\bs\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|e:\\aust 3.2\\asp.net project\\urban_nest-main\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\controllers\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\bs\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\bs\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\views\\bs\\sell.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -69,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\models\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:models\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,16 +82,154 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAIwJgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T19:07:08.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-30T21:07:52.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BSController.cs",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\BSController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BSController.cs",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\BSController.cs",
+              "RelativeToolTip": "Controllers\\BSController.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAIwHYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T03:20:03.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAAwIYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-22T21:08:01.25Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UserDashboard.cshtml",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\UserDashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\UserDashboard.cshtml",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\UserDashboard.cshtml",
+              "RelativeToolTip": "Views\\Home\\UserDashboard.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAABEAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-30T21:06:22.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAGwAAAAAAAAAAAD4v30AAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-22T19:29:48.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AgentsController.cs",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\AgentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AgentsController.cs",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\AgentsController.cs",
+              "RelativeToolTip": "Controllers\\AgentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-13T09:19:02.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "property.cs",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\property.cs",
+              "RelativeDocumentMoniker": "Models\\property.cs",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\property.cs",
+              "RelativeToolTip": "Models\\property.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAIwCoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T05:15:02.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Buy.cshtml",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\BS\\Buy.cshtml",
+              "RelativeDocumentMoniker": "Views\\BS\\Buy.cshtml",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\BS\\Buy.cshtml",
+              "RelativeToolTip": "Views\\BS\\Buy.cshtml",
+              "ViewState": "AQIAACAAAAAAAAAAAADwv4UAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-30T21:34:27.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Agent.cs",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\Agent.cs",
+              "RelativeDocumentMoniker": "Models\\Agent.cs",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\Agent.cs",
+              "RelativeToolTip": "Models\\Agent.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAkwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T12:38:55.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Signup.cshtml",
+              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Signup.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Signup.cshtml",
+              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Signup.cshtml",
+              "RelativeToolTip": "Views\\Home\\Signup.cshtml",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAwwHYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-22T21:08:24.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Agent.cshtml",
               "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Agents\\Agent.cshtml",
               "RelativeDocumentMoniker": "Views\\Agents\\Agent.cshtml",
               "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Agents\\Agent.cshtml",
               "RelativeToolTip": "Views\\Agents\\Agent.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAwEsAAAAVAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAADwvyEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-13T09:36:23.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T09:36:23.14Z"
             },
             {
               "$type": "Document",
@@ -105,139 +239,9 @@
               "RelativeDocumentMoniker": "Data\\Database_helper.cs",
               "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Data\\Database_helper.cs",
               "RelativeToolTip": "Data\\Database_helper.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAIwKoAAAAeAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAiwA0AAACuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T20:55:56.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Login.cshtml",
-              "RelativeToolTip": "Views\\Home\\Login.cshtml",
-              "ViewState": "AQIAAHoAAAAAAAAAAAAAwJAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T21:08:01.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Buy.cshtml",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\BS\\Buy.cshtml",
-              "RelativeDocumentMoniker": "Views\\BS\\Buy.cshtml",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\BS\\Buy.cshtml",
-              "RelativeToolTip": "Views\\BS\\Buy.cshtml",
-              "ViewState": "AQIAAG0AAAAAAAAAAAAowHgAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T21:34:27.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Account.cs",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\Account.cs",
-              "RelativeDocumentMoniker": "Controllers\\Account.cs",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\Account.cs",
-              "RelativeToolTip": "Controllers\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T11:51:36.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAHcAAAAAAAAAAAAIwIwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T19:07:08.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T21:07:52.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserDashboard.cshtml",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\UserDashboard.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\UserDashboard.cshtml",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\UserDashboard.cshtml",
-              "RelativeToolTip": "Views\\Home\\UserDashboard.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T21:06:22.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAGwAAAAAAAAAAAD4v30AAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T19:29:48.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AgentsController.cs",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\AgentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AgentsController.cs",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\AgentsController.cs",
-              "RelativeToolTip": "Controllers\\AgentsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAIwBMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T09:19:02.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Agent.cs",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\Agent.cs",
-              "RelativeDocumentMoniker": "Models\\Agent.cs",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\Agent.cs",
-              "RelativeToolTip": "Models\\Agent.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAADwvxgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T12:38:55.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Signup.cshtml",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Signup.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Signup.cshtml",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Views\\Home\\Signup.cshtml",
-              "RelativeToolTip": "Views\\Home\\Signup.cshtml",
-              "ViewState": "AQIAAG8AAAAAAAAAAAAwwHYAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-22T21:08:24.133Z",
               "EditorCaption": ""
             },
             {
@@ -251,18 +255,6 @@
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-23T21:00:28.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "property.cs",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\property.cs",
-              "RelativeDocumentMoniker": "Models\\property.cs",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Models\\property.cs",
-              "RelativeToolTip": "Models\\property.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAwwDAAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T05:15:02.793Z"
             },
             {
               "$type": "Document",
@@ -287,18 +279,6 @@
               "ViewState": "AQIAABcAAAAAAAAAAAAcwFwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-27T02:59:05.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BSController.cs",
-              "DocumentMoniker": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\BSController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BSController.cs",
-              "ToolTip": "E:\\AUST 3.2\\ASP.NET Project\\URBAN_NEST-main\\Controllers\\BSController.cs",
-              "RelativeToolTip": "Controllers\\BSController.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAwwGwAAACQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T03:20:03.124Z"
             },
             {
               "$type": "Document",

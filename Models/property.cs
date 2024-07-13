@@ -50,7 +50,7 @@ namespace UrbanNest.Models
 
         [Required]
         [DataType(DataType.Text)]
-        [Display(Name = "Property Image")]
+        [Display(Name = "Property_Image")]
         public string Image_01 { get; set; }
     }
 }

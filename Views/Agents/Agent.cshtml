@@ -10,7 +10,7 @@
     <div class="row">
         @foreach (var agent in Model)
         {
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-6 col-lg-3">
                 <div class="card agent-card mb-4 shadow-sm">
                     <div class="agent-image-wrapper">
                         <img src="~/Content/AgentImages/@agent.AgentImage" class="card-img-top" alt="@agent.AgentName">
@@ -45,8 +45,8 @@
     }
 
         .agent-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
 
     .agent-image-wrapper {
@@ -58,34 +58,35 @@
         .agent-image-wrapper img {
             transition: transform 0.3s;
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
         }
 
     .agent-card:hover .agent-image-wrapper img {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     .card-body {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: #ffffff;
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
-        padding: 20px;
+        padding: 15px;
     }
 
     .card-title {
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 1.15rem;
+        font-weight: 600;
         color: #333;
     }
 
     .card-text {
-        font-size: 1rem;
-        color: #555;
+        font-size: 0.95rem;
+        color: #777;
     }
 
     h2 {
         color: #004d40;
         font-weight: 700;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 </style>
