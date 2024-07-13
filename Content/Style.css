@@ -1,0 +1,166 @@
+﻿:root {
+    --white: #FFFFFF;
+    --yellow: #F6BD26;
+    --primary-100: #2179FF;
+    --primary-90: #1E6DE5;
+    --primary-80: #1B61CC;
+    --primary-70: #1755B2;
+    --primary-40: #0D3166;
+    --primary-20: #071833;
+    --secondary-100: #21FFFF;
+    --secondary-20: #073333;
+    --neutral-100: #FAFCFF;
+    --neutral-98: #F2F5FA;
+    --neutral-95: #E9ECF2;
+    --neutral-90: #DADFE5;
+    --neutral-80: #C2C6CC;
+    --neutral-60: #919499;
+    --neutral-50: #797C80;
+    --neutral-40: #616366;
+    --neutral-30: #494A4D;
+    --neutral-20: #303133;
+    --neutral-10: #18191A;
+    --neutral-5: #0C0C0D;
+    --error-100: #FF2134;
+    --gradient: linear-gradient(270deg,#0F4392 0%, #001D3D 100%);
+    --font-primary: 'Montserrat', sans-serif !important;
+    --fs-base: 62.5%;
+    --fs-headline-large: 3.6rem;
+    --fs-headline-medium: 2.8rem;
+    --fs-headline-small: 2.8rem;
+    --fs-title-large: 2.2rem;
+    --fs-title-medium: 2rem;
+    --fs-title-small: 1.8rem;
+    --fs-body-large: 1.6rem;
+    --fs-body-medium: 1.6rem;
+    --fs-label-large: 1.6rem;
+    --fs-label-medium: 1.4rem;
+    --lh-headline-large: 44px;
+    --lh-headline-medium: 36px;
+    --lh-headline-small: 36px;
+    --lh-title-large: 28px;
+    --lh-title-medium: 24px;
+    --lh-title-small: 24px;
+    --lh-body-large: 24px;
+    --lh-body-medium: 24px;
+    --lh-label-large: 24px;
+    --lh-label-medium: 20px;
+    --weight-bold: 700;
+    --weight-semiBold: 600;
+    --weight-regular: 400;
+    --traking-n-025: -0.25px;
+    --traking-p-05: 0.5px;
+    --radius-small: 8px;
+    --radius-medium: 12px;
+    --radius-large: 16px;
+    --radius-extra-large: 32px;
+    --radius-full: 1000px;
+    --radius-circle: 50%;
+    --shadow-1: 0px 2px 4px 0px #00000033;
+    --shadow-2: 0px 5px 10px 0px #0000000D;
+    --shadow-3: 0px 5px 10px 0px #00000033;
+    --shadow-4: 0px 10px 20px 0px #0000001A;
+    --transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
+    --transition-duration-quick: 200ms;
+    --transition-duration-smooth: 500ms;
+}
+
+material-symbols-rounded {
+    display: block;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.search-bar {
+    background: var(--white);
+    width: 400px;
+    display: flex;
+    padding: 45px;
+    gap: 11px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-4);
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+}
+
+    .search-bar:hover {
+        background: #ededed;
+        animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(92, 201, 255, 0.7), 0 0 20px rgba(92, 201, 255, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(3, 149, 247, 0.9), 0 0 30px rgba(92, 176, 255, 0.7);
+    }
+}
+
+.search-item {
+    position: relative;
+    color: var(--neutral-50);
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center;
+}
+
+    .search-item .search-item-field {
+        height: 70px;
+        padding: 27px 33px 10px;
+        
+        border-radius: var(--radius-medium);
+        transition: var(--transition-duration-quick) var(--transition-easing-quick);
+        cursor: pointer;
+        flex: 1;
+        margin-right: -4px; /* Flex to fill available space */
+    }
+
+        .search-item .search-item-field:where(:hover, :focus) {
+            background-color: var(--neutral-95);
+        }
+
+    .search-item :where(.label, .material-symbols-rounded) {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    .search-item .label {
+        top: 12px;
+        left: 35px;
+        color: var(--neutral-5);
+    }
+
+    .search-item .material-symbols-rounded {
+        top: 50%;
+        right: 29px;
+        transform: translateY(-50%);
+        color: var(--primary-100);
+    }
+
+.search-btn {
+    background: var(--primary-100);
+    color: var(--neutral-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    padding-inline: 24px;
+    gap: 12px;
+    border-radius: 12px;
+    transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+    .search-btn:where(:hover, :focus) {
+        background-color: var(--primary-80);
+    }
+
+    .search-btn:where(:active, :focus-visible) {
+        background-color: var(--primary-70);
+    }

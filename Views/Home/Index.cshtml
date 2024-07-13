@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Content/Style.css" />
+    <!--  favicon  -->
+    <link rel="shortcut icon" href="~/Content/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
     <style>
         body {
             background-color: #f8f9fa;
@@ -91,8 +95,7 @@
 
         .services {
             padding: 50px 0;
-            justify-content:center;
-            
+            justify-content: center;
         }
 
             .services h2 {
@@ -127,7 +130,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-            margin-right:20px;
+            margin-right: 20px;
         }
 
             .testimonial-item p {
@@ -236,7 +239,7 @@
             .recommendation .info button {
                 background-color: transparent;
                 border: 2px solid #1e90ff;
-                border-radius:30px;
+                border-radius: 30px;
                 color: #1e90ff;
                 padding: 10px 20px;
                 font-size: 1rem;
@@ -269,11 +272,10 @@
                     left: -20%;
                 }
 
-            .BuyImg{
-                width:50%;
-                margin-left:100px;
-                
-            }
+        .BuyImg {
+            width: 50%;
+            margin-left: 100px;
+        }
 
         .services-item {
             background-color: #fff;
@@ -281,19 +283,23 @@
             border-radius: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 10px;
-            align-content:center;
-            margin-right:20px;
+            align-content: center;
+            margin-right: 20px;
         }
+
             .services-item p {
                 color: #555;
-                text-align:center;
+                text-align: center;
             }
-            .services-item button{
-                align-content:center;
+
+            .services-item button {
+                align-content: center;
             }
-            .services-item h2{
-                font-weight:bold;
+
+            .services-item h2 {
+                font-weight: bold;
             }
+
         .services-btn {
             background-color: transparent;
             border: 2px solid #0026ff;
@@ -309,11 +315,13 @@
             position: relative;
             overflow: hidden;
         }
+
             .services-btn:hover {
                 background-color: #0026ff;
                 color: #fff;
                 box-shadow: 0 0 20px rgba(30, 144, 255, 0.6);
             }
+
             .services-btn::before {
                 content: '';
                 position: absolute;
@@ -326,10 +334,12 @@
                 transition: all 0.5s ease;
                 z-index: 1;
             }
+
             .services-btn:hover::before {
                 top: -20%;
                 left: -20%;
             }
+
         .row {
             --bs-gutter-x: 1.5rem;
             --bs-gutter-y: 0;
@@ -348,37 +358,48 @@
                 <div class="col-md-6">
                     <h1>Find a place where you can be yourself</h1>
                     <p>If you are looking for a place where you can be yourself, don't give up. Keep searching until you find a place that feels like home.</p>
-                    <div class="search-form">
-                        <form class="form-inline">
-                            <div class="form-group mr-2">
-                                <label for="wantTo" class="sr-only">Want to</label>
-                                <select class="form-control" id="wantTo">
-                                    <option>Buy</option>
-                                    <option>Rent</option>
-                                </select>
-                            </div>
-                            <div class="form-group mr-2">
-                                <label for="propertyType" class="sr-only">Property Type</label>
-                                <select class="form-control" id="propertyType">
-                                    <optgroup label="Residential">
-                                        <option value="apartment" selected>Apartment</option>
-                                        <option value="Room">Room</option>
-                                        <option value="flat">Flat</option>
-                                        <option value="plot">Plot</option>
-                                    </optgroup>
-                                    <optgroup label="Commercial">
-                                        <option value="office">Office</option>
-                                        <option value="floor">Floor</option>
-                                    </optgroup>
-                                </select>
-                            </div>
-                            <div class="form-group mr-2">
-                                <label for="location" class="sr-only">Location</label>
-                                <input type="text" class="form-control" id="location" placeholder="Street, City, Zip ...">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Search</button>
-                        </form>
-                    </div>
+                    <form action="" method="post" class="search-bar">
+
+                        <label class="search-item">
+                            <span class="label-medium label">Want to</span>
+                            <select name="want-to" class="search-item-field body-medium">
+                                <option value="buy" selected>Buy</option>
+                                <option value="Rent">Rent</option>
+                            </select>
+                            <span class="material-symbols-rounded" aria-hidden="true">real_estate_agent</span>
+                        </label>
+
+                        <label class="search-item">
+                            <span class="label-medium label">Property Type</span>
+                            <select name="property-type" class="search-item-field body-medium">
+                                <option value="any" selected>Any</option>
+                                <optgroup label="Residential">
+                                    <option value="apartment" selected>Apartment</option>
+                                    <option value="Room">Room</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="plot">Plot</option>
+                                </optgroup>
+                                <optgroup label="Commercial">
+                                    <option value="office">Office</option>
+                                    <option value="floor">Floor</option>
+                                </optgroup>
+                            </select>
+                            <span class="material-symbols-rounded" aria-hidden="true">gite</span>
+                        </label>
+
+                        <label class="search-item">
+                            <span class="label-medium label">Location</span>
+                            <input type="text" name="location" placeholder="Street, City, Zip ..." class="search-item-field body-medium">
+                            <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+                        </label>
+
+                        <button type="submit" name="submit" class="search-btn">
+                            <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                            <span class="label-medium">Search</span>
+                        </button>
+
+                    </form>
+
                 </div>
                 <div class="col-md-6 gif-container">
                     <img src="~/Content/house.png" alt="Animation">
@@ -396,7 +417,7 @@
                 <div class="info">
                     <h3>Get home recommendations</h3>
                     <p>Signin for a more personalized experience.</p>
-                    <button type="button" class="btn btn-primary custom-signin-btn">Sign in</button>
+                    <button type="submit" class="btn btn-primary custom-signin-btn">Sign in</button>
                 </div>
             </div>
         </div>
@@ -447,12 +468,6 @@
         </div>
     </div>
 
-    <div class="call-to-action">
-        <div class="container">
-            <h2>Ready to find your dream home?</h2>
-            <button type="button" class="btn btn-primary">Get Started</button>
-        </div>
-    </div>
 
     <div class="featured-listings">
         <div class="container">
@@ -478,7 +493,11 @@
     </div>
 
     <footer class="text-center py-4">
-        <p>&copy; 2024 UrbanNest. All rights reserved.</p>
+        <div class="container">
+            <img src="~/Content/footerhero.jpg" />
+            <h2>Ready to find your dream home?</h2>
+            <button type="button" class="btn btn-primary">Get Started</button>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
