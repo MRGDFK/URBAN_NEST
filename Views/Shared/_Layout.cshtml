@@ -188,8 +188,9 @@
                     <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Buy", "Buy", "BS", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("Sell", "Sell", "BS", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li class="nav-item">@Html.ActionLink("Agent", "Agent", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Agent", "Agent", "Agents", new { area = "" }, new { @class = "nav-link" })</li>
                     <li class="nav-item">@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
                 </ul>
 
                 <ul class="navbar-nav">
@@ -208,7 +209,7 @@
                                 <img src="~/Content/user.png" alt="Profile" style="height: 25px; width: 25px;" />
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="@Url.Action("Profile", "Account")">Profile</a>
+                                <a class="dropdown-item" href="@Url.Action("UserDashboard", "Home")">Profile</a>
                                 <a class="dropdown-item logout" href="@Url.Action("Logout", "Home")">Logout</a>
                             </div>
                         </li>

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<UrbanNest.Models.Agent>
+
+@{
+    ViewBag.Title = "Agent Listing";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-5">Our Top Agents</h2>
+
+    <div class="row">
+        @foreach (var agent in Model)
+        {
+            <div class="col-md-4 col-sm-6 col-lg-3">
+                <div class="card agent-card mb-4 shadow-sm">
+                    <div class="agent-image-wrapper">
+                        <img src="~/Content/AgentImages/@agent.AgentImage" class="card-img-top" alt="@agent.AgentName">
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@agent.AgentName</h5>
+                        <p class="card-text">
+                            <strong>Username:</strong> @agent.AgentUsername<br />
+                            <strong>Address:</strong> @agent.AgentAddress<br />
+                            <strong>Contact:</strong> @agent.AgentContact<br />
+                            <strong>Email:</strong> @agent.AgentEmail<br />
+                            <strong>Review:</strong> @agent.AgentReview<br />
+                            <strong>Stars:</strong> @agent.AgentStar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .agent-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        border-radius: 15px;
+    }
+
+        .agent-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+    .agent-image-wrapper {
+        overflow: hidden;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+        .agent-image-wrapper img {
+            transition: transform 0.3s;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+    .agent-card:hover .agent-image-wrapper img {
+        transform: scale(1.05);
+    }
+
+    .card-body {
+        background: #ffffff;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        color: #777;
+    }
+
+    h2 {
+        color: #004d40;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+</style>

@@ -9,12 +9,16 @@ namespace UrbanNest.Models
     public class Agent
     {
         public int AgentId { get; set; }
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
-        public string ProfilePictureUrl { get; set; }
-        public string Bio { get; set; }
-        public ICollection<RealEstateListing> Listings { get; set; }
+
+        public string AgentName { get; set; }
+        public string AgentUsername { get; set; }
+        public string AgentImage { get; set; }
+        public string AgentAddress { get; set; }
+        public string AgentContact { get; set; }
+        public string AgentEmail { get; set; }
+       
+        public string AgentReview { get; set; }
+        public double AgentStar { get; set; }
     }
 }
 

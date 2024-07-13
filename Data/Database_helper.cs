@@ -5,12 +5,13 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Net;
 using System.Security.Policy;
+using UrbanNest.Models;
 
 namespace UrbanNest.Data
 {
     public class Database_helper
     {
-        private static readonly string connectionString = "Data Source=MRGDFK\\SQLEXPRESS;Initial Catalog=real_estate_listing_properties;Integrated Security=True";
+        private static readonly string connectionString = "Data Source=DESKTOP-AIKR8ED\\SQLEXPRESS01;Initial Catalog=real_estate_listing_properties;Integrated Security=True";
 
         public static int RegisterUser(string firstName, string lastName, string email, string password, string address, string phone)
         {
@@ -37,6 +38,8 @@ namespace UrbanNest.Data
                 return newUsersId;
             }
         }
+
+        
 
 
 
@@ -142,6 +145,41 @@ namespace UrbanNest.Data
                 return result > 0;
             }
         }
+
+        public static List<Agent> GetAllAgents()
+        {
+            List<Agent> agents = new List<Agent>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM agent";
+                SqlCommand cmd = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Agent agent = new Agent
+                        {
+                            AgentId = reader.GetInt32(reader.GetOrdinal("agent_id")),
+                            AgentName = reader.GetString(reader.GetOrdinal("agent_name")),
+                            AgentUsername = reader.GetString(reader.GetOrdinal("agent_username")),
+                            AgentImage = reader.GetString(reader.GetOrdinal("agent_image")),
+                            AgentAddress = reader.GetString(reader.GetOrdinal("agent_address")),
+                            AgentContact = reader.GetString(reader.GetOrdinal("agent_contact")),
+                            AgentEmail = reader.GetString(reader.GetOrdinal("agent_email")),
+                            AgentReview = reader.GetString(reader.GetOrdinal("agent_review")),
+                            AgentStar = reader.GetDouble(reader.GetOrdinal("agent_star"))
+                        };
+                        agents.Add(agent);
+                    }
+                }
+                connection.Close();
+            }
+            return agents;
+        }
+
 
     }
 }
