@@ -234,7 +234,7 @@ select *from generate
 
 USE real_estate_listing_properties;
 	select *from Property;
-
+ALTER TABLE Property
 
 
 ALTER TABLE property
