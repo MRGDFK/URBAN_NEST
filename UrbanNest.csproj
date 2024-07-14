@@ -130,6 +130,7 @@
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\property.cs" />
+    <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\Signup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -162,6 +163,7 @@
     <Content Include="Content\recom.jpg" />
     <Content Include="Content\rent.jpg" />
     <Content Include="Content\rent.png" />
+    <Content Include="Content\script.js" />
     <Content Include="Content\search.png" />
     <Content Include="Content\sell.jpg" />
     <Content Include="Content\sell.png" />

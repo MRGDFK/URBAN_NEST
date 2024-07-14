@@ -10,6 +10,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buy Properties</title>
+    <link rel="stylesheet" href="~/Content/Style.css" />
+    <!--  favicon  -->
+    <link rel="shortcut icon" href="~/Content/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -42,33 +46,7 @@
                 font-weight: bold;
             }
 
-        .property-card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-            .property-card img {
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                max-height: 200px;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            .property-card .card-body {
-                padding: 15px;
-            }
-
-            .property-card .card-title {
-                font-size: 1.25rem;
-                font-weight: bold;
-            }
-
-            .property-card .card-text {
-                color: #555;
-            }
+       
 
         .btn-primary {
             background-color: #1e90ff;
@@ -78,56 +56,200 @@
             .btn-primary:hover {
                 background-color: #1c86ee;
             }
+
+        .banner{
+            
+        }
+        .buyimg{
+            background-size:cover;
+            background-repeat:no-repeat;
+            width:100%;
+        }
+        .search-bar-buypage {
+            background: var(--white);
+            width: 887px;
+            display: grid;
+            padding: 45px;
+            gap: 5px;
+            border-radius: 14px;
+            box-shadow: var(--shadow-4);
+            transition: box-shadow 0.2s ease;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 50px;
+            margin-left: 110px;
+        }
+
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Real Estate</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Buy</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Rent</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="banner">
+        <img class="buyimg" src="~/Content/footerhero.jpg" />
+        <form action="@Url.Action("SearchProperties","BS")" method="get" class="search-bar-buypage">
 
-    <div class="hero">
-        <div class="container">
-            <h1>Available Properties for Sale</h1>
-        </div>
+            <label class="search-item">
+                <span class="label-medium label">Want to</span>
+                <select name="want-to" class="search-item-field body-medium">
+                    <option value="buy" selected>Buy</option>
+                    <option value="Rent">Rent</option>
+                </select>
+                <span class="material-symbols-rounded" aria-hidden="true">real_estate_agent</span>
+            </label>
+
+            <label class="search-item">
+                <span class="label-medium label">Property Type</span>
+                <select name="property-type" class="search-item-field body-medium">
+                    <option value="any" selected>Any</option>
+                    <optgroup label="Residential">
+                        <option value="apartment" selected>Apartment</option>
+                        <option value="Room">Room</option>
+                        <option value="flat">Flat</option>
+                        <option value="plot">Plot</option>
+                    </optgroup>
+                    <optgroup label="Commercial">
+                        <option value="office">Office</option>
+                        <option value="floor">Floor</option>
+                    </optgroup>
+                </select>
+                <span class="material-symbols-rounded" aria-hidden="true">gite</span>
+            </label>
+
+            <label class="search-item">
+                <span class="label-medium label">Location</span>
+                <input type="text" name="location" placeholder="Street, City, Zip ..." class="search-item-field body-medium">
+                <span class="material-symbols-rounded" aria-hidden="true">location_on</span>
+            </label>
+
+            <button type="submit" name="submit" class="search-btn">
+                <span class="material-symbols-rounded" aria-hidden="true">search</span>
+                <span class="label-medium">Search</span>
+            </button>
+
+        </form>
     </div>
+    <div class="container">
+     
+        @if (ViewBag.FilteredProperties != null && ViewBag.FilteredProperties.Count() > 0)
+        {
+            <h2>Filtered Properties</h2>
+            <div class="property-list">
+                @foreach (var property in ViewBag.FilteredProperties)
+                {
+                    <div class="card">
 
-    <div class="container mt-5">
-        <div class="row">
-            @foreach (var property in Model)
-            {
-                <div class="col-md-4">
-                    <div class="property-card">
-                        <img src="@Url.Content("~/Images/" + property.Image_01)" alt="Property Image">
-                        <div class="card-body">
-                            <h5 class="card-title">@property.Title</h5>
-                            <p class="card-text">@property.status</p>
-                            <p class="card-text"><strong>Price:</strong> $@property.Price</p>
-                            <a href="#" class="btn btn-primary">View Details</a>
+                        <div class="card-banner">
+
+                            <figure class="img-holder" style="--width: 585; --height: 390;">
+
+
+                                <img src="@Url.Content( "~/Property_up_Images/"+ property.Image_01)" width="585" height="390" alt="Property Image" class="img-cover">
+
+                            </figure>
+                            <button class="icon-btn fav-btn" aria-label="add to favourite" data-fav-toggle-btn>
+
+                                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+
+                            </button>
                         </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
+                        <div class="card-content">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                            <span class="title-large">@property.Price৳</span>
+                            <h3><a href="#" class="title-small card-title">@property.Title</a></h3>
+                            <address class="body-medium card-text">@property.Location</address>
+                            <address class="body-medium card-text">@property.status</address>
+
+                            <div class="card-meta-list">
+                                <div class="meta-item">
+
+                                    <span class="material-symbols-rounded meta-icon" aria-hidden="true">bed</span>
+                                    <span class="meta-text label-medium">@property.Bed Bed</span>
+                                </div>
+                                <div class="meta-item">
+
+                                    <span class="material-symbols-rounded meta-icon" aria-hidden="true">bathtub</span>
+                                    <span class="meta-text label-medium">@property.Bath Bath</span>
+                                </div>
+                                <div class="meta-item">
+
+                                    <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
+                                    <span class="meta-text label-medium">@property.Area</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                }
+            </div>
+        }
+        <hr />
+
+        <div class="hero">
+            <div class="container">
+                <h1>Available Properties for Sale</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="property-list">
+                @foreach (var property in Model)
+                {
+                   
+                    <div class="card">
+
+                        <div class="card-banner">
+
+                            <figure class="img-holder" style="--width: 585; --height: 390;">
+
+
+                                <img src="@Url.Content( "~/Property_up_Images/"+ property.Image_01)" width="585" height="390" alt="Property Image" class="img-cover">
+
+                            </figure>
+                            <button class="icon-btn fav-btn" aria-label="add to favourite" data-fav-toggle-btn>
+
+                                <span class="material-symbols-rounded" aria-hidden="true">favorite</span>
+
+                            </button>
+                        </div>
+                        <div class="card-content">
+
+                            <span class="title-large">@property.Price৳</span>
+                            <h3><a href="#" class="title-small card-title">@property.Title</a></h3>
+                            <address class="body-medium card-text">@property.Location</address>
+                            <address class="body-medium card-text">@property.status</address>
+
+                            <div class="card-meta-list">
+                                <div class="meta-item">
+
+                                    <span class="material-symbols-rounded meta-icon" aria-hidden="true">bed</span>
+                                    <span class="meta-text label-medium">@property.Bed Bed</span>
+                                </div>
+                                <div class="meta-item">
+
+                                    <span class="material-symbols-rounded meta-icon" aria-hidden="true">bathtub</span>
+                                    <span class="meta-text label-medium">@property.Bath Bath</span>
+                                </div>
+                                <div class="meta-item">
+
+                                    <span class="material-symbols-rounded meta-icon" aria-hidden="true">straighten</span>
+                                    <span class="meta-text label-medium">@property.Area</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                }
+            </section>
+        </div>
+        <script src="~/Content/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

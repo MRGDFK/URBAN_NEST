@@ -14,6 +14,7 @@ namespace UrbanNest.Controllers
 {
     public class BSController : Controller
     {
+        
         // GET: BS
         public ActionResult Sell()
         {
@@ -34,27 +35,6 @@ namespace UrbanNest.Controllers
 
             return Redirect(Request.UrlReferrer.ToString());
         }
-        /*
-                [HttpPost]
-                [ValidateAntiForgeryToken]
-                public ActionResult RegisterProperty(property model)
-                {
-                    if (ModelState.IsValid)
-                    {
-                        string sellerId = Session["seller_id"]?.ToString();
-                        if (Database_helper.RegisterProperty(sellerId, model.Title, model.Location, model.Price, model.Area, model.Bed, model.Bath, model.type, model.status, model.Image_01))
-                        {
-                            return RedirectToAction("Index", "Home");
-                        }
-                        else
-                        {
-                            return RedirectToAction("Sihnup", "Home");
-
-                        }
-                    }
-                    return View(model);
-                }
-                */
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -108,7 +88,7 @@ namespace UrbanNest.Controllers
             List<property> properties = new List<property>();
 
             // Connection string directly in the code
-            string connectionString = "Data Source=DESKTOP-AIKR8ED\\SQLEXPRESS01;Initial Catalog=real_estate_listing_properties;Integrated Security=True"; // or with User ID and Password
+            string connectionString = "Data Source=MRGDFK\\SQLEXPRESS;Initial Catalog=real_estate_listing_properties;Integrated Security=True"; // or with User ID and Password
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -117,9 +97,11 @@ namespace UrbanNest.Controllers
                 {
                     con.Open();
                     using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
+                    {   
                         while (reader.Read())
                         {
+                            Session["searchQueryLoc"] = reader["prop_location"].ToString();
+                            
                             properties.Add(new property
                             {
 
@@ -134,7 +116,8 @@ namespace UrbanNest.Controllers
                                 
                                 status = reader["prop_status"].ToString(),
                                 Image_01 = reader["prop_image"].ToString()
-                                
+
+
                                 
                             });
                         }
@@ -145,6 +128,65 @@ namespace UrbanNest.Controllers
             return properties;
         }
 
+        [HttpGet]
+        public ActionResult SearchProperties(SearchViewModel model)
+        {
+            var filteredProperties = FilterPropertiesFromDatabase(model);
+            return View("Buy", filteredProperties);
+        }
+
+        private IEnumerable<property> FilterPropertiesFromDatabase(SearchViewModel model)
+        {
+            List<property> properties = new List<property>();
+
+            // Implement your database query logic here based on the search criteria
+            // Example query construction
+            string query = "SELECT prop_id, seller_id, prop_location, prop_type, prop_description, prop_size, prop_price, prop_status, prop_image, prop_bed, prop_bath FROM property WHERE 1=1";
+
+            if (!string.IsNullOrEmpty(model.Location))
+            {
+                query += $" AND prop_location LIKE '%{model.Location}%'";
+            }
+
+            if (!string.IsNullOrEmpty(model.PropertyType) && model.PropertyType.ToLower() != "any")
+            {
+                query += $" AND prop_type = '{model.PropertyType}'";
+            }
+
+            // Execute the query
+            string connectionString = "Data Source=MRGDFK\\SQLEXPRESS;Initial Catalog=real_estate_listing_properties;Integrated Security=True";
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            properties.Add(new property
+                            {
+                                Title = reader["prop_description"].ToString(),
+                                Location = reader["prop_location"].ToString(),
+                                Price = reader["prop_price"].ToString(),
+                                Area = reader["prop_size"].ToString(),
+                                Bed = reader["prop_bed"].ToString(),
+                                Bath = reader["prop_bath"].ToString(),
+                                type = reader["prop_type"].ToString(),
+                                status = reader["prop_status"].ToString(),
+                                Image_01 = reader["prop_image"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+
+            return properties;
+        }
+
+
+
 
     }
+
 }
