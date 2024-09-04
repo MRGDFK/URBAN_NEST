@@ -349,6 +349,19 @@
             margin-right: calc(-0.5* var(--bs-gutter-x));
             margin-left: calc(-0.5* var(--bs-gutter-x));
         }
+        .buyimg {
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+        .info-footer {
+            justify-content: center;
+            top: 10px;
+            display: grid;
+            /* background: lightblue; */
+            gap: 5px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -474,31 +487,32 @@
             <h2>Featured Listings</h2>
             <div class="row">
                 <div class="col-md-4 listing-item">
-                    <img src="~/Content/house1.jpg" alt="House 1">
+                    <img src="~/Content/property-6.jpg" alt="House 1">
                     <h3>Modern Apartment</h3>
                     <p>This modern apartment is located in a prime location and features stunning views.</p>
                 </div>
                 <div class="col-md-4 listing-item">
-                    <img src="~/Content/house2.jpg" alt="House 2">
+                    <img src="~/Content/property-3.jpg"  alt="House 2">
                     <h3>Luxury Villa</h3>
                     <p>This luxury villa offers unparalleled comfort and style, with top-of-the-line amenities.</p>
                 </div>
                 <div class="col-md-4 listing-item">
-                    <img src="~/Content/house3.jpg" alt="House 3">
+                    <img src="~/Content/property-2.jpg" alt="House 3">
                     <h3>Cozy Cottage</h3>
                     <p>This cozy cottage is perfect for those looking for a peaceful and charming home.</p>
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="text-center py-4">
-        <div class="container">
-            <img src="~/Content/footerhero.jpg" />
+    <div class="banner">
+        <img class="buyimg" src="~/Content/video-card.jpg" />
+        <div class="info-footer">
             <h2>Ready to find your dream home?</h2>
             <button type="button" class="btn btn-primary">Get Started</button>
         </div>
-    </footer>
+        
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

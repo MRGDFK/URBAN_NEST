@@ -130,12 +130,14 @@
     <Compile Include="Models\Agent.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\property.cs" />
+    <Compile Include="Models\PropertyDetailsViewModel.cs" />
     <Compile Include="Models\SearchViewModel.cs" />
     <Compile Include="Models\Signup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\AgentImages\john.png" />
+    <Content Include="Content\agentLocation.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -159,17 +161,22 @@
     <Content Include="Content\footerhero.jpg" />
     <Content Include="Content\home.png" />
     <Content Include="Content\house.png" />
+    <Content Include="Content\property-2.jpg" />
+    <Content Include="Content\property-3.jpg" />
+    <Content Include="Content\property-6.jpg" />
     <Content Include="Content\real-estate.gif" />
     <Content Include="Content\recom.jpg" />
     <Content Include="Content\rent.jpg" />
     <Content Include="Content\rent.png" />
     <Content Include="Content\script.js" />
     <Content Include="Content\search.png" />
+    <Content Include="Content\searchScript.js" />
     <Content Include="Content\sell.jpg" />
     <Content Include="Content\sell.png" />
     <Content Include="Content\Style.css" />
     <Content Include="Content\urbanNest.png" />
     <Content Include="Content\user.png" />
+    <Content Include="Content\video-card.jpg" />
     <Content Include="facebook.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -214,6 +221,7 @@
     <Content Include="Views\BS\Sell.cshtml" />
     <Content Include="Views\BS\Buy.cshtml" />
     <Content Include="Views\Agents\Agent.cshtml" />
+    <Content Include="Views\BS\PropertyDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

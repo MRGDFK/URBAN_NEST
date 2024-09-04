@@ -155,7 +155,7 @@
                         <div class="card-content">
 
                             <span class="title-large">@property.Price৳</span>
-                            <h3><a href="#" class="title-small card-title">@property.Title</a></h3>
+                            <h3><a href="@Url.Action("PropertyDetails", "BS", new { id = property.propId })" class="title-small card-title">@property.Title</a></h3>
                             <address class="body-medium card-text">@property.Location</address>
                             <address class="body-medium card-text">@property.status</address>
 
@@ -216,7 +216,7 @@
                         <div class="card-content">
 
                             <span class="title-large">@property.Price৳</span>
-                            <h3><a href="#" class="title-small card-title">@property.Title</a></h3>
+                            <h3><a href="@Url.Action("PropertyDetails", "BS", new { id = property.propId })" class="title-small card-title">@property.Title</a></h3>
                             <address class="body-medium card-text">@property.Location</address>
                             <address class="body-medium card-text">@property.status</address>
 

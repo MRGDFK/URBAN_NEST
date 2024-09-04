@@ -52,5 +52,18 @@ namespace UrbanNest.Models
         [DataType(DataType.Text)]
         [Display(Name = "Property_Image")]
         public string Image_01 { get; set; }
+
+        public string SellerId { get; set; }
+
+        public int propId { get; set; }
+    }
+
+    public class Seller
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string sellerID { get; set; }
     }
 }
