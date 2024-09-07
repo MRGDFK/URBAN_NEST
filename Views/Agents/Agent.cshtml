@@ -3,96 +3,123 @@
 @{
     ViewBag.Title = "Agent Listing";
 }
-<link rel="stylesheet" href="~/Content/agentLocation.css"/>
+<link rel="stylesheet" href="~/Content/agentLocation.css" />
 <link rel="shortcut icon" href="~/Content/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
+
 <div class="container mt-4">
     <h2 class="text-center mb-5">Our Top Agents</h2>
 
-    <form action="@Url.Action("Agent", "Agents")" method="get" class="mb-4">
-        <div class="row">
-            <div class="searchcontainer">
-                <div class="custom-select">
-                    <div class="select-box">
-                        <input type="text" class="tags_input" name="searchString" hidden value="@Request.QueryString["searchString"]"  />
-                        <div class="selected-options">
-                            <span class="placeholder">Select the tags</span>
+    <form action="@Url.Action("Agent", "Agents")" method="get" class="search-sort-box mb-4 p-4 shadow-sm">
+        <div class="row align-items-center">
+            <!-- Search Container -->
+            <div class="col-md-8">
+                <div class="searchcontainer">
+                    <div class="custom-select">
+                        <div class="select-box">
+                            <input type="text" class="tags_input" name="searchString" hidden value="@Request.QueryString["searchString"]" />
+                            <div class="selected-options">
+                                <span class="placeholder">Select Area</span>
+                            </div>
+                            <div class="arrow">
+                                <i class="fa fa-angle-down"></i>
+                            </div>
                         </div>
-                        <div class="arrow">
-                            <i class="fa fa-angle-down"></i>
+                        <div class="options">
+                            <div class="option-search-tags">
+                                <input type="text" class="search-tags" placeholder="Search Areas..." />
+                                <button type="button" class="clear">Clear</button>
+                            </div>
+                            <!-- List of locations -->
+                            <div class="option" data-value="Gopibagh">Gopibagh</div>
+                            <div class="option" data-value="Motijheel">Motijheel</div>
+                            <div class="option" data-value="Badda">Badda</div>
+                            <div class="option" data-value="Rampura">Rampura</div>
+                            <div class="option" data-value="Tejgaon">Tejgaon</div>
+                            <div class="option" data-value="Adabor">Adabor</div>
+                            <div class="option" data-value="Mohammadpur">Mohammadpur</div>
+                            <div class="option" data-value="Shaymoli">Shaymoli</div>
+                            <div class="option" data-value="Dhanmondi">Dhanmondi</div>
+                            <div class="option" data-value="Gulshan">Gulshan</div>
+                            <div class="option" data-value="Banani">Banani</div>
+                            <div class="option" data-value="Uttara">Uttara</div>
+                            <div class="option" data-value="Khilgaon">Khilgaon</div>
+                            <div class="no-result-message" style="display: none;">No Results</div>
                         </div>
+                        <span class="tag_error_msg error"></span>
                     </div>
-                    <div class="options">
-                        <div class="option-search-tags">
-                            <input type="text" class="search-tags" placeholder="Search tags....." />
-                            <button type="button" class="clear">Clear</button>
-                        </div>
-                        <!-- List of locations -->
-                        <div class="option" data-value="Gopibagh">Gopibagh</div>
-                        <div class="option" data-value="Motijheel">Motijheel</div>
-                        <div class="option" data-value="Badda">Badda</div>
-                        <div class="option" data-value="Rampura">Rampura</div>
-                        <div class="option" data-value="Tejgaon">Tejgaon</div>
-                        <div class="option" data-value="Adabor">Adabor</div>
-                        <div class="option" data-value="Mohammadpur">Mohammadpur</div>
-                        <div class="option" data-value="Shaymoli">Shaymoli</div>
-                        <div class="option" data-value="Dhanmondi">Dhanmondi</div>
-                        <div class="option" data-value="Gulshan">Gulshan</div>
-                        <div class="option" data-value="Banani">Banani</div>
-                        <div class="option" data-value="Uttara">Uttara</div>
-                        <div class="option" data-value="Khilgaon">Khilgaon</div>
-                        <div class="no-result-message" style="display: none;">No Result Message</div>
-                    </div>
-                    <span class="tag_error_msg error"></span>
                 </div>
-                <button type="submit" value="Search" class="btn_submit">
-                    Search
-                </button>
             </div>
-            <div class="col-md-4">
+
+            <!-- Sort Container -->
+            <div class="col-md-3">
                 <select name="sortOrder" class="form-control">
                     <option value="rating_desc" @(Request.QueryString["sortOrder"] == "rating_desc" ? "selected" : "")>Sort by Rating: High to Low</option>
                     <option value="rating_asc" @(Request.QueryString["sortOrder"] == "rating_asc" ? "selected" : "")>Sort by Rating: Low to High</option>
                 </select>
             </div>
-            <div class="col-md-4">
-                <button type="submit" class="btn btn-primary d-flex align-items-center justify-content-center">
+
+            <!-- Submit Button -->
+            <div class="col-md-1 text-center">
+                <button type="submit" class="btn btn-primary">
                     <span class="material-symbols-rounded" aria-hidden="true">swap_vert</span>
                 </button>
             </div>
         </div>
+
+        <!-- Reset Button -->
+        <div class="mt-3 text-right">
+            <a href="@Url.Action("Agent", "Agents")" class="btn btn-secondary">Reset Search</a>
+        </div>
     </form>
 
-
-    <div class="row">
-        @foreach (var agent in Model)
-        {
-            <div class="col-md-4 col-sm-6 col-lg-3">
-                <div class="card agent-card mb-4 shadow-sm">
-                    <div class="agent-image-wrapper">
-                        <img src="~/Content/AgentImages/@agent.AgentImage" class="card-img-top" alt="@agent.AgentName">
-                    </div>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">@agent.AgentName</h5>
-                        <p class="card-text">
-                            <strong>Username:</strong> @agent.AgentUsername<br />
-                            <strong>Address:</strong> @agent.AgentAddress<br />
-                            <strong>Contact:</strong> @agent.AgentContact<br />
-                            <strong>Email:</strong> @agent.AgentEmail<br />
-                            <strong>Review:</strong> @agent.AgentReview<br />
-                            <strong>Stars:</strong> @agent.AgentStar
-                        </p>
+    <!-- Check if there are agents -->
+    @if (!Model.Any())
+    {
+        <div class="text-center">
+            <h4>No agents available in this area.</h4>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var agent in Model)
+            {
+                <div class="col-md-4 col-sm-6 col-lg-3">
+                    <div class="card agent-card mb-4 shadow-sm">
+                        <div class="agent-image-wrapper">
+                            <img src="~/Content/AgentImages/@agent.AgentImage" class="card-img-top" alt="@agent.AgentName">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">@agent.AgentName</h5>
+                            <p class="card-text">
+                                <strong>Username:</strong> @agent.AgentUsername<br />
+                                <strong>Address:</strong> @agent.AgentAddress<br />
+                                <strong>Contact:</strong> @agent.AgentContact<br />
+                                <strong>Email:</strong> @agent.AgentEmail<br />
+                                <strong>Review:</strong> @agent.AgentReview<br />
+                                <strong>Stars:</strong> @agent.AgentStar
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        }
-    </div>
+            }
+        </div>
+    }
 </div>
+
 <script src="~/Content/searchScript.js"></script>
+
 <style>
     .container {
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    .search-sort-box {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .agent-card {
@@ -151,8 +178,7 @@
         display: inline-block;
         min-height: 1em;
         vertical-align: middle;
-        cursor: wait;
-        background-color:transparent;
+        background-color: transparent;
         opacity: 0.5;
     }
 
@@ -160,19 +186,23 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 5px; /* Adds space between the icon and the button text */
+        gap: 5px;
+    }
+
+    .btn-secondary {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        background-color: #6c757d;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
     }
 
     .material-symbols-rounded {
         font-size: 1.2em;
         color: white;
     }
-
-    .search-item .material-symbols-rounded {
-        top: 50%;
-        right: 29px;
-        transform: translateY(-50%);
-        color: var(--primary-100);
-    }
-    
 </style>

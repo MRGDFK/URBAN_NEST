@@ -3,15 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|c:\\users\\mrgdfk\\downloads\\versity\\3.2\\sd project\\urbannest\\content\\searchscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:content\\searchscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|c:\\users\\mrgdfk\\downloads\\versity\\3.2\\sd project\\urbannest\\views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\agents\\agent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -19,12 +11,24 @@
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\agentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\models\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:models\\agent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\content\\searchscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:content\\searchscript.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:content\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:controllers\\bscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\views\\bs\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -35,15 +39,11 @@
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:models\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|c:\\users\\mrgdfk\\downloads\\versity\\3.2\\sd project\\urbannest\\content\\agentlocation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\content\\agentlocation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:content\\agentlocation.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|c:\\users\\mrgdfk\\downloads\\versity\\3.2\\sd project\\urbannest\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BCB14BFB-0F58-4832-BB39-6B63ACBDB7C7}|UrbanNest.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
@@ -106,21 +106,19 @@
               "RelativeToolTip": "Views\\Home\\About.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-02T05:39:01.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T05:39:01.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "searchScript.js",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Content\\searchScript.js",
               "RelativeDocumentMoniker": "Content\\searchScript.js",
               "ToolTip": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Content\\searchScript.js",
               "RelativeToolTip": "Content\\searchScript.js",
-              "ViewState": "AQIAAHAAAAAAAAAAAAAzwJoAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-04T14:01:42.344Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T14:01:42.344Z"
             },
             {
               "$type": "Document",
@@ -160,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Agent.cs",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Models\\Agent.cs",
               "RelativeDocumentMoniker": "Models\\Agent.cs",
@@ -173,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "script.js",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Content\\script.js",
               "RelativeDocumentMoniker": "Content\\script.js",
@@ -181,31 +179,30 @@
               "RelativeToolTip": "Content\\script.js",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-07-14T17:20:53.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T17:20:53.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Agent.cshtml",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Views\\Agents\\Agent.cshtml",
               "RelativeDocumentMoniker": "Views\\Agents\\Agent.cshtml",
               "ToolTip": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Views\\Agents\\Agent.cshtml",
               "RelativeToolTip": "Views\\Agents\\Agent.cshtml",
-              "ViewState": "AQIAAIcAAAAAAAAAAAAAALIAAAAAAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAABUAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-13T20:48:15.232Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AgentsController.cs",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Controllers\\AgentsController.cs",
               "RelativeDocumentMoniker": "Controllers\\AgentsController.cs",
               "ToolTip": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Controllers\\AgentsController.cs",
               "RelativeToolTip": "Controllers\\AgentsController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAANAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBEAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T20:46:56.143Z",
               "EditorCaption": ""
@@ -224,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Buy.cshtml",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Views\\BS\\Buy.cshtml",
               "RelativeDocumentMoniker": "Views\\BS\\Buy.cshtml",
@@ -232,8 +229,7 @@
               "RelativeToolTip": "Views\\BS\\Buy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T21:34:27.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T21:34:27.338Z"
             },
             {
               "$type": "Document",
@@ -245,12 +241,11 @@
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AQIAANoBAAAAAAAAAAAAAOUBAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T21:07:52.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T21:07:52.954Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "BSController.cs",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Controllers\\BSController.cs",
               "RelativeDocumentMoniker": "Controllers\\BSController.cs",
@@ -258,8 +253,7 @@
               "RelativeToolTip": "Controllers\\BSController.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAowNMAAACPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T03:20:03.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T03:20:03.124Z"
             },
             {
               "$type": "Document",
@@ -299,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "property.cs",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Models\\property.cs",
               "RelativeDocumentMoniker": "Models\\property.cs",
@@ -307,8 +301,7 @@
               "RelativeToolTip": "Models\\property.cs",
               "ViewState": "AQIAACcAAAAAAAAAAAAmwDkAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T05:15:02.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-27T05:15:02.793Z"
             },
             {
               "$type": "Document",
@@ -336,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "agentLocation.css",
               "DocumentMoniker": "C:\\Users\\MRGDFK\\Downloads\\VERSITY\\3.2\\SD Project\\UrbanNest\\Content\\agentLocation.css",
               "RelativeDocumentMoniker": "Content\\agentLocation.css",
@@ -344,8 +337,7 @@
               "RelativeToolTip": "Content\\agentLocation.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-04T14:00:18.863Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-04T14:00:18.863Z"
             }
           ]
         }
