@@ -18,8 +18,8 @@ namespace UrbanNest.Data
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string insertQuery = @"
-            INSERT INTO Users (users_name, users_username, users_email, users_password, users_address, users_contact) 
-            VALUES (@FirstName, @LastName, @Email, @Password, @Address, @Phone);
+            INSERT INTO Users (users_name, users_username, users_email, users_password, users_address, users_contact, users_date) 
+            VALUES (@FirstName, @LastName, @Email, @Password, @Address, @Phone, @Time);
             SELECT SCOPE_IDENTITY();";
 
                 SqlCommand cmd = new SqlCommand(insertQuery, connection);
@@ -29,6 +29,7 @@ namespace UrbanNest.Data
                 cmd.Parameters.AddWithValue("@Password", password);
                 cmd.Parameters.AddWithValue("@Address", address);
                 cmd.Parameters.AddWithValue("@Phone", phone);
+                cmd.Parameters.AddWithValue("@Time",DateTime.Now);
 
                 connection.Open();
                 // Since SCOPE_IDENTITY() returns a decimal, we need to cast it properly
@@ -155,6 +156,36 @@ namespace UrbanNest.Data
             return agents;
         }
 
+        public static User GetUserDetails(int userId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT users_name, users_email, users_address, users_contact, users_date FROM Users WHERE users_id = @userId";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@userId", userId);
+
+                connection.Open();
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        User user = new User
+                        {
+                            FullName = reader["users_name"].ToString(),
+                            Email = reader["users_email"].ToString(),
+                            Address = reader["users_address"].ToString(),
+                            Phone = reader["users_contact"].ToString(),
+                            JoinedDate = Convert.ToDateTime(reader["users_date"])
+                        };
+                        return user;
+                    }
+                }
+                connection.Close();
+            }
+            return null;
+        }
 
     }
+
+
 }

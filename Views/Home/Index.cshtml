@@ -300,6 +300,8 @@
                 font-weight: bold;
             }
 
+       
+
         .services-btn {
             background-color: transparent;
             border: 2px solid #0026ff;
@@ -349,11 +351,13 @@
             margin-right: calc(-0.5* var(--bs-gutter-x));
             margin-left: calc(-0.5* var(--bs-gutter-x));
         }
+
         .buyimg {
             background-size: cover;
             background-repeat: no-repeat;
             width: 100%;
         }
+
         .info-footer {
             justify-content: center;
             top: 10px;
@@ -430,11 +434,14 @@
                 <div class="info">
                     <h3>Get home recommendations</h3>
                     <p>Signin for a more personalized experience.</p>
-                    <button type="submit" class="btn btn-primary custom-signin-btn">Sign in</button>
+                    <form action="@Url.Action("Login", "Home")" method="get">
+                        <button type="submit" class="btn btn-primary custom-signin-btn">Sign in</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="services">
         <div class="container">
@@ -443,19 +450,25 @@
                     <img src="~/Content/buy.jpg" class="BuyImg" />
                     <h2>Buy a home</h2>
                     <p>Find your place with an immersive photo experience and the most listings, including things you won't find anywhere else.</p>
-                    <button type="button" class="services-btn">Browse homes</button>
+                    <form action="@Url.Action("Buy", "BS")" method="get">
+                        <button type="submit" class="services-btn">Browse Homes</button>
+                    </form>
                 </div>
                 <div class="col-md-4 services-item">
                     <img src="~/Content/sell.jpg" class="BuyImg" />
                     <h2>Sell home</h2>
                     <p>No matter what path you take to sell your home, we can help you navigate a successfull sale.</p>
-                    <button type="button" class="services-btn">See your options</button>
+                    <form action="@Url.Action("Sell", "BS")" method="get">
+                        <button type="submit" class="services-btn">See your options</button>
+                    </form>
                 </div>
                 <div class="col-md-4 services-item">
                     <img src="~/Content/rent.jpg" class="BuyImg" />
                     <h2>Rent a home</h2>
                     <p>We're creating a seamless online experience - from shopping on the largest rental network, to applying, to paying rent.</p>
-                    <button type="button" class="services-btn">Find rentals</button>
+                    <form action="@Url.Action("Buy", "BS")" method="get">
+                        <button type="submit" class="services-btn">Find Rentals</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -492,7 +505,7 @@
                     <p>This modern apartment is located in a prime location and features stunning views.</p>
                 </div>
                 <div class="col-md-4 listing-item">
-                    <img src="~/Content/property-3.jpg"  alt="House 2">
+                    <img src="~/Content/property-3.jpg" alt="House 2">
                     <h3>Luxury Villa</h3>
                     <p>This luxury villa offers unparalleled comfort and style, with top-of-the-line amenities.</p>
                 </div>
@@ -508,9 +521,12 @@
         <img class="buyimg" src="~/Content/video-card.jpg" />
         <div class="info-footer">
             <h2>Ready to find your dream home?</h2>
-            <button type="button" class="btn btn-primary">Get Started</button>
+            <form action="@Url.Action("Signup", "Home")" method="get">
+                <button type="submit" class="services-btn">Get started</button>
+            </form>
+
         </div>
-        
+
     </div>
 
 

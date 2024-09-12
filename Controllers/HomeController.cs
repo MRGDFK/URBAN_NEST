@@ -51,7 +51,21 @@ namespace UrbanNest.Controllers
 
         public ActionResult UserDashboard()
         {
-            return View();
+            if (Session["LoggedIn"] != null && Session["LoggedIn"].ToString() == "active")
+            {
+                ViewBag.FullName = Session["FullName"];
+                ViewBag.Email = Session["Email"];
+                ViewBag.Phone = Session["Phone"];
+                ViewBag.Address = Session["Address"];
+                ViewBag.JoinedDate = Session["JoinedDate"];
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");  // Redirect to login if not authenticated
+            }
+            
         }
 
         [HttpPost]
@@ -120,9 +134,16 @@ namespace UrbanNest.Controllers
 
                     if (sellerId != null)
                     {
-                        
+                        var userDetails = Database_helper.GetUserDetails(userId);
+
                         Session["LoggedIn"] = "active";
                         Session["seller_id"] = sellerId;
+                        Session["FullName"] = userDetails.FullName;
+                        Session["Email"] = userDetails.Email;
+                        Session["Phone"] = userDetails.Phone;
+                        Session["Address"] = userDetails.Address;
+                        Session["JoinedDate"] = userDetails.JoinedDate.ToString("MMMM dd, yyyy");
+
 
                         return RedirectToAction("Index", "Home");
                     }

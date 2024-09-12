@@ -43,5 +43,7 @@ namespace UrbanNest.Models
         [DataType(DataType.Text)]
         [Display(Name = "Phone")]
         public string Phone { get; set; }
+
+        public  DateTime Time {  get; set; }
     }
 }
