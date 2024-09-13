@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -58,6 +59,8 @@ namespace UrbanNest.Controllers
                 ViewBag.Phone = Session["Phone"];
                 ViewBag.Address = Session["Address"];
                 ViewBag.JoinedDate = Session["JoinedDate"];
+
+                ViewBag.ProfilePicture = Session["ProfilePicture"] != null ? Session["ProfilePicture"].ToString() : "default.png";  // Fallback to default if no picture
 
                 return View();
             }
@@ -142,6 +145,7 @@ namespace UrbanNest.Controllers
                         Session["Email"] = userDetails.Email;
                         Session["Phone"] = userDetails.Phone;
                         Session["Address"] = userDetails.Address;
+                        Session["ProfilePicture"] = userDetails.ProfilePicture;
                         Session["JoinedDate"] = userDetails.JoinedDate.ToString("MMMM dd, yyyy");
 
 
@@ -168,8 +172,41 @@ namespace UrbanNest.Controllers
         }
 
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult UploadProfilePicture(HttpPostedFileBase profilePicture)
+        {
+            if (profilePicture != null && profilePicture.ContentLength > 0)
+            {
+                // Generate a unique file name
+                var fileName = Path.GetFileNameWithoutExtension(profilePicture.FileName);
+                var extension = Path.GetExtension(profilePicture.FileName);
+                var uniqueFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
 
-    
+                // Define the path where the file will be saved
+                var path = Path.Combine(Server.MapPath("~/Content/ProfilePictures/"), uniqueFileName);
+
+                // Save the file
+                profilePicture.SaveAs(path);
+
+                // Update the user's profile picture in the database
+                string email = Session["Email"]?.ToString(); // Or however you identify the user
+                if (Database_helper.UpdateUserProfilePicture(email, uniqueFileName))
+                {
+                    // Update the session or ViewBag with the new profile picture path
+                    Session["ProfilePicture"] = uniqueFileName;
+                    ViewBag.ProfilePicture = uniqueFileName;
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Failed to update profile picture.");
+                }
+            }
+            return RedirectToAction("UserDashboard");
+        }
+
+
+
 
 
 

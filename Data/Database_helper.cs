@@ -158,32 +158,60 @@ namespace UrbanNest.Data
 
         public static User GetUserDetails(int userId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT users_name, users_email, users_address, users_contact, users_date FROM Users WHERE users_id = @userId";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@userId", userId);
+            User user = null;
 
+            // Your database code to get the user details
+            using (var connection = new SqlConnection(connectionString))
+            {
                 connection.Open();
-                using (SqlDataReader reader = cmd.ExecuteReader())
+                using (var command = new SqlCommand("SELECT * FROM Users WHERE users_id = @UserId", connection))
                 {
-                    if (reader.Read())
+                    command.Parameters.AddWithValue("@UserId", userId);
+
+                    using (var reader = command.ExecuteReader())
                     {
-                        User user = new User
+                        if (reader.Read())
                         {
-                            FullName = reader["users_name"].ToString(),
-                            Email = reader["users_email"].ToString(),
-                            Address = reader["users_address"].ToString(),
-                            Phone = reader["users_contact"].ToString(),
-                            JoinedDate = Convert.ToDateTime(reader["users_date"])
-                        };
-                        return user;
+                            user = new User
+                            {
+                                FullName = reader["users_name"] != DBNull.Value ? reader["users_name"].ToString() : string.Empty,
+                                ProfilePicture = reader["users_image"] != DBNull.Value ? reader["users_image"].ToString() : string.Empty,
+                                // Replace other properties with similar checks
+                                Email = reader["users_email"] != DBNull.Value ? reader["users_email"].ToString() : string.Empty,
+                                Phone = reader["users_contact"] != DBNull.Value ? reader["users_contact"].ToString() : string.Empty,
+                                Address = reader["users_address"] != DBNull.Value ? reader["users_address"].ToString() : string.Empty,
+                                JoinedDate = reader["users_date"] != DBNull.Value ? (DateTime)reader["users_date"] : default(DateTime)
+                            };
+                        }
                     }
                 }
-                connection.Close();
             }
-            return null;
+
+            return user;
         }
+
+
+        public static bool UpdateUserProfilePicture(string email, string profilePictureFileName)
+        {
+            // Your database connection and update logic here
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "UPDATE users SET users_image = @ProfilePicture WHERE users_email = @Email";
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@ProfilePicture", profilePictureFileName);
+                    cmd.Parameters.AddWithValue("@Email", email);
+
+                    connection.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    connection.Close();
+
+                    return rowsAffected > 0;
+                }
+            }
+        }
+
+
 
     }
 

@@ -64,7 +64,9 @@
 
             .profile-header img {
                 border-radius: 50%;
-                max-width: 100px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
                 margin-right: 20px;
             }
 
@@ -75,6 +77,15 @@
 
             .profile-header p {
                 color: #6c757d;
+            }
+
+        .profile-update {
+            margin-top: 20px;
+        }
+
+            .profile-update h3 {
+                color: #0a3d62;
+                margin-bottom: 20px;
             }
 
         .profile-details {
@@ -111,11 +122,23 @@
 
     <div class="content dashboard-container">
         <div class="profile-header">
-            <img src="~/Content/user.png" alt="User Profile Picture">
+            <img src="@Url.Content("~/Content/ProfilePictures/" + (ViewBag.ProfilePicture ?? "default-user-icon.png"))" alt="User Profile Picture">
             <div>
                 <h2>@ViewBag.FullName</h2>
                 <p>@ViewBag.Email</p>
             </div>
+        </div>
+
+        <div class="profile-update">
+            <h3>Change Profile Picture</h3>
+            <form action="/Home/UploadProfilePicture" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <label for="profilePicture">Select Profile Picture</label>
+                    <input type="file" name="profilePicture" class="form-control-file" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
         </div>
 
         <div class="profile-details">
