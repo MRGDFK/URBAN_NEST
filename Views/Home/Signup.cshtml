@@ -98,7 +98,7 @@
                 <div class="form-section">
                     <h2 class="text-center">Sign up</h2>
                     <p class="text-center">Already have an account? <a href="@Url.Action("Login", "Home")">Sign in</a></p>
-                    @using (Html.BeginForm("Signup", "Home", FormMethod.Post))
+                    @using (Html.BeginForm("Signup", "Home", FormMethod.Post, new { id = "signupForm" }))
                     {
                         @Html.AntiForgeryToken()
                         <div class="form-group">
@@ -113,7 +113,7 @@
                         </div>
                         <div class="form-group">
                             @Html.LabelFor(m => m.Email)
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email-address" })
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Enter Email-address", id = "email" })
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
@@ -128,7 +128,7 @@
                         </div>
                         <div class="form-group">
                             @Html.LabelFor(m => m.Password)
-                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password" })
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter Password", id = "password" })
                             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                         </div>
                         <div class="form-group">
@@ -163,9 +163,79 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Email Warning Modal -->
+    <div class="modal fade" id="emailWarningModal" tabindex="-1" role="dialog" aria-labelledby="emailWarningModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emailWarningModalLabel">Invalid Email</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Please use a valid email address ending with <strong>@@gmail.com</strong>.
+                </div>
+                <div class="modal-footer">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Warning Modal -->
+    <div class="modal fade" id="passwordWarningModal" tabindex="-1" role="dialog" aria-labelledby="passwordWarningModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordWarningModalLabel">Invalid Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Password must be at least 6 characters long.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     @Scripts.Render("~/bundles/jqueryval")
+
+
+    <script>
+        $(document).ready(function () {
+            
+            $('#signupForm').submit(function (e) {
+                var email = $('#email').val();
+                var password = $('#password').val();
+
+                
+                if (!email.endsWith('gmail.com')) {
+                    e.preventDefault();
+                    $('#emailWarningModal').modal('show');
+                }
+
+                
+                if (password.length < 6) {
+                    e.preventDefault();
+                    $('#passwordWarningModal').modal('show');
+                }
+            });
+
+            // Modal close button event listener (added for robustness)
+            $('.modal .close').on('click', function () {
+                $(this).closest('.modal').modal('hide');
+            });
+        });
+    </script>
+
 </body>
 </html>

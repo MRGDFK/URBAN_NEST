@@ -153,12 +153,16 @@ namespace UrbanNest.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "Failed to retrieve seller ID. Please try again.");
+                        TempData["ErrorMessage"] = "Failed to retrieve seller ID. Please try again.";
+                        return RedirectToAction("Login");
+                        //ModelState.AddModelError("", "Failed to retrieve seller ID. Please try again.");
                     }
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Invalid email or password. Please try again.");
+                    TempData["ErrorMessage"] = "Invalid email or password. Please try again.";
+                    return RedirectToAction("Login");
+                    //ModelState.AddModelError("", "Invalid email or password. Please try again.");
                 }
             }
             return View(model);
